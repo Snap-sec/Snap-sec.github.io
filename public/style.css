@@ -259,7 +259,7 @@ body{
 }
 
 .product-img{
-    margin: 42px auto;
+    margin: 42px 0px 0px 0px;
     z-index: 1;
 	position: relative;
     border-radius: 21.429px;
@@ -268,10 +268,7 @@ body{
         linear-gradient(rgb(23 17 52), rgb(14 9 43)) padding-box,
         linear-gradient(120deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
     backdrop-filter: blur(10px);
-    width: 1000px;
-    padding: 10px 80px;
 }
-
 
 .hero-container .profile-img{
     margin: 19px 0px 0px 0px;
@@ -361,7 +358,7 @@ body{
     background: rgba(123, 1, 167, 0.30);
     filter: blur(100px);
     top: -90px;
-    left: 850px;
+    left: 726px;
 }
 
 .eclips2{
@@ -372,7 +369,7 @@ body{
     background: rgba(54, 1, 167, 0.30);
     filter: blur(100px);
     top: 262px;
-    left: -250px;
+    left: -109px;
 }
 
 .eclips3{
@@ -498,7 +495,7 @@ body{
     background: linear-gradient(180deg, rgba(5, 5, 32, 0.00) 0%, #040833 100%);
     width: 100%;
     height: 343px;
-    top: 3750px;
+    top: 4300px;
 }
 
 .ellipse-blog{
@@ -806,7 +803,6 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-decoration: none;
 }
 
 .services .service-card .see-more-btn img{
@@ -1045,10 +1041,7 @@ body{
 }
 
 .testimonials .testimonials-heading .inner-text{
-    background: linear-gradient(268deg, #0FD3FE 8.33%, #0E41ED 66.28%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0084FF;
     font-family: Plus Jakarta Sans;
     font-size: 60px;
     font-style: normal;
@@ -1441,6 +1434,133 @@ body{
 }
 
 
+/* Comming soon page */
+
+.comming-soon{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0px;
+}
+
+.comming-soon .comming-soon-text h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.comming-soon .comming-soon-text .inner-text{
+    background: linear-gradient(268deg, #0FD3FE 8.33%, #0E41ED 66.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.comming-soon .comming-soon-text P{
+    color: #FFF;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe{
+    margin: 40px auto;
+    width: 550px;
+}
+
+.subscribe div p{
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.subscribe .subscribe-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    gap: 17px;
+}
+
+.subscribe .subscribe-input input{
+    width: 350px;
+    height: 42px;
+    border-radius: 4px;
+    border: 0.536px solid rgba(255, 255, 255, 0.46);
+    backdrop-filter: blur(17.14285659790039px);
+    margin: 8px 0px 0px 0px;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+    padding: 14px 14px;
+}
+
+.subscribe .subscribe-input button{
+    padding: 0px 30px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background:
+    linear-gradient( 97deg, rgb(12 24 58) 0%, rgb(16 14 64) 100%) padding-box,
+    linear-gradient(160deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
+    backdrop-filter: blur(2px);
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+
+}
+
+.subscribe .subscribe-input button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 0.536px solid transparent;
+    background:linear-gradient(90deg, rgb(14, 65, 237) 0%, rgb(15, 208, 254) 100%);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: -1;
+}
+
+
+.subscribe .subscribe-input button:hover::before {
+    opacity: 1;
+}
+
+
 /* Footer */
 
 footer{
@@ -1558,8 +1678,6 @@ footer .footer-logo-section .text{
     backdrop-filter: blur(17.14285659790039px);
     margin: 0 auto;
     padding: 32px 32px;
-    position: relative;
-    z-index: 1;
 }
 
 .contact-card .text{
@@ -1634,10 +1752,9 @@ footer .footer-logo-section .text{
     display: flex;
     justify-content: right;
     gap: 17px;
-    margin: 36px 0px 0px 0px;
 }
 
-.contact-card .contact-btns button{
+.contact-card button{
     padding: 0px 30px;
     height: 48px;
     border-radius: 4px;
@@ -1651,6 +1768,7 @@ footer .footer-logo-section .text{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 36px 0px 0px 0px;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -1665,7 +1783,7 @@ footer .footer-logo-section .text{
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    border: 1px solid transparent;
+    border: 0.536px solid transparent;
     background:linear-gradient(90deg, rgb(14, 65, 237) 0%, rgb(15, 208, 254) 100%);
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -1682,15 +1800,6 @@ footer .footer-logo-section .text{
     text-align: center;
     z-index: 1;
 }
-
-
-
-.social-media svg:hover path{
-    fill: #0084FF;
-    stroke: #0084FF;
-    fill-opacity:0.9 !important ;
-    stroke-width:0.3; 
-  }
 
 .social-media p{
     color: rgba(255, 255, 255, 0.70);
