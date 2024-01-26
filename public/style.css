@@ -259,7 +259,7 @@ body{
 }
 
 .product-img{
-    margin: 42px 0px 0px 0px;
+    margin: 42px auto;
     z-index: 1;
 	position: relative;
     border-radius: 21.429px;
@@ -268,7 +268,10 @@ body{
         linear-gradient(rgb(23 17 52), rgb(14 9 43)) padding-box,
         linear-gradient(120deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
     backdrop-filter: blur(10px);
+    width: 1000px;
+    padding: 10px 80px;
 }
+
 
 .hero-container .profile-img{
     margin: 19px 0px 0px 0px;
@@ -358,7 +361,7 @@ body{
     background: rgba(123, 1, 167, 0.30);
     filter: blur(100px);
     top: -90px;
-    left: 726px;
+    left: 850px;
 }
 
 .eclips2{
@@ -369,7 +372,7 @@ body{
     background: rgba(54, 1, 167, 0.30);
     filter: blur(100px);
     top: 262px;
-    left: -109px;
+    left: -250px;
 }
 
 .eclips3{
@@ -495,7 +498,7 @@ body{
     background: linear-gradient(180deg, rgba(5, 5, 32, 0.00) 0%, #040833 100%);
     width: 100%;
     height: 343px;
-    top: 4300px;
+    top: 3750px;
 }
 
 .ellipse-blog{
@@ -803,6 +806,7 @@ body{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-decoration: none;
 }
 
 .services .service-card .see-more-btn img{
@@ -1041,7 +1045,10 @@ body{
 }
 
 .testimonials .testimonials-heading .inner-text{
-    color: #0084FF;
+    background: linear-gradient(268deg, #0FD3FE 8.33%, #0E41ED 66.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: Plus Jakarta Sans;
     font-size: 60px;
     font-style: normal;
@@ -1434,6 +1441,7 @@ body{
 }
 
 
+
 /* Comming soon page */
 
 .comming-soon{
@@ -1678,6 +1686,8 @@ footer .footer-logo-section .text{
     backdrop-filter: blur(17.14285659790039px);
     margin: 0 auto;
     padding: 32px 32px;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-card .text{
@@ -1752,9 +1762,10 @@ footer .footer-logo-section .text{
     display: flex;
     justify-content: right;
     gap: 17px;
+    margin: 36px 0px 0px 0px;
 }
 
-.contact-card button{
+.contact-card .contact-btns button{
     padding: 0px 30px;
     height: 48px;
     border-radius: 4px;
@@ -1768,7 +1779,6 @@ footer .footer-logo-section .text{
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 36px 0px 0px 0px;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -1783,7 +1793,7 @@ footer .footer-logo-section .text{
     width: 100%;
     height: 100%;
     border-radius: 4px;
-    border: 0.536px solid transparent;
+    border: 1px solid transparent;
     background:linear-gradient(90deg, rgb(14, 65, 237) 0%, rgb(15, 208, 254) 100%);
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -1800,6 +1810,15 @@ footer .footer-logo-section .text{
     text-align: center;
     z-index: 1;
 }
+
+
+
+.social-media svg:hover path{
+    fill: #0084FF;
+    stroke: #0084FF;
+    fill-opacity:0.9 !important ;
+    stroke-width:0.3; 
+  }
 
 .social-media p{
     color: rgba(255, 255, 255, 0.70);
@@ -2384,5 +2403,4 @@ footer{
         transform: translateX(-100px);
     }
 } */
-
 
