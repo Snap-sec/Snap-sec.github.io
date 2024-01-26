@@ -133,24 +133,24 @@
 
     <label class="label">
       <p>Name</p>
-      <input type="text">
+      <input type="text" id="FIRSTNAME" name="FIRSTNAME">
     </label>
 
     <label class="label1">
       <p>Email</p>
-      <input type="text">
+      <input type="text" id="EMAIL" name="EMAIL">
     </label>
 
     <label>
       <p>Description(Optional)</p>
-      <textarea rows="4" placeholder=""></textarea>
+      <textarea rows="4" placeholder="" name="MEETING_DESCRIPTION" id="MEETING_DESCRIPTION"></textarea>
     </label>
 
     <div class="contact-btns">
       <button>
         Schedule a meeting
       </button>
-      <button>
+      <button onclick="sendForm()">
         Submit
       </button>
     </div>
@@ -324,5 +324,43 @@
 </div>
 
 </body>
+
+
+<script type="text/javascript">
+  
+function sendForm(){
+
+
+fname=document.getElementById('FIRSTNAME').value
+email=document.getElementById('EMAIL').value
+meeting_desc=document.getElementById('MEETING_DESCRIPTION').value
+
+
+formData="FIRSTNAME="+fname+"&EMAIL="+email+"&MEETING_DESCRIPTION="+meeting_desc
+
+url='https://8422075a.sibforms.com/serve/MUIFAMbCkAAh-Z-G9en9C0c_iFGmchMFQ0iSox8kYapsv8zEavBs7ruR--fxBMsmVRat7pmGc9pTSNQYzCdE8iOjhfrHICH7pF8ST-yfDd-5BEy-2ciJJkekOhwojFGibGRxKTy6GyXIt-0xV4Fq0vpf6CoWQqFqC4cVBufltVY5KMVYPUbgr4M5m-gl7otkXMS4dlnNjhRw86FH'
+
+
+
+
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // Handle the response here
+        console.log(xhr.responseText);
+    }
+};
+
+xhr.send(formData);
+
+}
+</script>
+
+
 
 </html>
