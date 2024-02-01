@@ -128,11 +128,11 @@
             </div>
 
             <div class="subscribe-input">
-                <input type="text" placeholder="Enter Your Email">
-                <button>
-                    Notify me
-                </button>
-            </div>
+              <input type="text" name="EMAIL" id="EMAIL" placeholder="Enter Your Email">
+              <button onclick="sendForm()"> 
+                  Notify me
+              </button>
+          </div>
         </div>
 
 
@@ -301,6 +301,37 @@
 
     updateCountdownValues();
     var countdownInterval = setInterval(updateCountdownValues, 1000);
+
+
+
+    
+function sendForm(){
+
+
+email=document.getElementById('EMAIL').value
+
+
+formData="EMAIL="+email
+
+url='https://8422075a.sibforms.com/serve/MUIFAAX_QCWy1vuqch1_eV5kZ9KTuqgQUq66FUQi4zOvOyCOumKnoHld1CxgZba8I-LCf2JB8DAjtJTuDQ-z1Dk7mWiY2IKk04GBU_y1i6D_O6KHpmNkK2mw5QPhMk77UrlT14KH3kHbTJZDuK2kjQMgb7ZkPyjF6y9vuQ0Sxa2eyECe3Fsl0TDI3wNgm5UjcS6MckYeSKpoBLhc'
+
+
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        // Handle the response here
+        console.log(xhr.responseText);
+    }
+};
+
+xhr.send(formData);
+
+}
 </script>
 
 
