@@ -21,6 +21,463 @@ body{
     align-items: center;
 }
 
+/* Second Navbar In Hover */
+
+
+.service-hover-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-hover-nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 16px 0px 0px 152px;
+    gap: 13.5px;
+}
+
+
+.service-hover-nav .logo .logo-text{
+    color: #0084FF;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.service-hover-nav .main-manu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.service-hover-nav .main-manu li{
+    list-style: none;
+    margin: 23px 0px 0px 0px;
+}
+
+
+.service-hover-nav .main-manu li a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+}
+
+
+.service-hover-nav .main-manu li a.active{
+	color: #0084FF;
+	font-family: Plus Jakarta Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+
+.service-hover-nav .main-manu li a.active::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+	height: 2px;
+	background: #0084FF;
+	left: 0px;
+	bottom: -6px;
+}
+
+
+.service-hover-nav .btn{
+    width: 117px;
+    height: 36px;
+    border-radius: 4px;
+    background: 
+    linear-gradient(#161336, #1a182b) padding-box,
+    linear-gradient(160deg, #0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
+    backdrop-filter: blur(4px);
+    border: 0.5px solid rgba(0, 132, 255, 0.089);
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 15px 152px 0px 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.service-hover{
+    position: fixed;
+    width: 100%;
+    height: 332px;
+    background: #01041C;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    margin-top: -52px;
+}
+
+.navbar-line{
+    width: 80%;
+    margin: 26px auto;
+    height: 1px;
+    opacity: 0.2;
+    background: #FFF;
+}
+
+.service-hover .hover-links{
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 20px auto;
+    padding: 0px 152px;
+}
+
+.service-hover .hover-links .link{
+    flex-basis: calc(33.3333% - 32px);
+    max-width: calc(33.3333% - 32px);
+    box-sizing: border-box;
+    display: flex;
+    gap:16px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.service-hover .hover-links .link a{
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.service-hover .hover-links .link .new-style{
+    color: #3561F6;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    align-items: center;
+}
+
+.service-hover .hover-links .link a:hover{
+    background: linear-gradient(90deg, #3561F6 1.1%, #0FD3FE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Products hover */
+
+
+.product-hover-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-hover-nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 16px 0px 0px 152px;
+    gap: 13.5px;
+}
+
+
+.product-hover-nav  .logo .logo-text{
+    color: #0084FF;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.product-hover-nav  .main-manu{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.product-hover-nav .main-manu li{
+    list-style: none;
+    margin: 23px 0px 0px 0px;
+}
+
+.product-hover-nav  .main-manu li a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    z-index: 1;
+}
+
+
+.product-hover-nav  .main-manu li a.active{
+	color: #0084FF;
+	font-family: Plus Jakarta Sans;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+
+.product-hover-nav  .main-manu li a.active::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+	height: 2px;
+	background: #0084FF;
+	left: 0px;
+	bottom: -6px;
+}
+
+
+.product-hover-nav  .btn{
+    width: 117px;
+    height: 36px;
+    border-radius: 4px;
+    background: 
+    linear-gradient(#161336, #1a182b) padding-box,
+    linear-gradient(160deg, #0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
+    backdrop-filter: blur(4px);
+    border: 0.5px solid rgba(0, 132, 255, 0.089);
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 15px 152px 0px 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Product-hover{
+    position: fixed;
+    width: 100%;
+    height: 332px;
+    background: #01041C;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    margin-top: -52px;
+}
+
+.Product-hover .navbar-line{
+    width: 80%;
+    margin: 26px auto;
+    height: 1px;
+    opacity: 0.2;
+    background: #FFF;
+}
+
+.Product-hover .hover-links{
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 20px auto;
+    padding: 0px 152px;
+}
+
+.Product-hover .hover-links .link{
+    flex-basis: calc(33.3333% - 32px);
+    max-width: calc(33.3333% - 32px);
+    box-sizing: border-box;
+    display: flex;
+    gap:16px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.Product-hover .hover-links .link a{
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.Product-hover .hover-links .link .new-style{
+    color: #3561F6;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    align-items: center;
+}
+
+.Product-hover .hover-links .link a:hover{
+    background: linear-gradient(90deg, #3561F6 1.1%, #0FD3FE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Popup tap */
+
+
+.popup{
+    position: fixed;
+    background: rgba(3, 5, 34, 0.30);
+    backdrop-filter: blur(17.5px);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    margin: 0 auto;
+    margin-top: -55px;
+}
+
+.popup .popup-inside{
+    width: 728px;
+    height: 490px;
+    flex-shrink: 0;
+    border-radius:4px;
+    background:rgb(56 49 117);
+    backdrop-filter: blur(17.14285659790039px);
+    margin: 100px auto;
+    padding: 24px;
+}
+
+.popup .popup-inside .popup-deep{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.20);
+    margin:0 auto ;
+    padding: 24px 24px;
+    position: relative;
+}
+
+
+.popup .popup-inside .popup-deep .svg-x{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.popup .popup-inside .popup-deep .svg{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.popup .popup-inside .popup-deep h1{
+    margin-top: 40px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.popup .popup-inside .popup-deep .inner-text{
+    background: linear-gradient(90deg, #0084FF 63.62%, #0FD3FE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.popup .popup-inside .popup-deep p{
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.7;
+    margin-top: 12px;
+}
+
+.popup .popup-inside .popup-deep input{
+    width: 80%;
+    height: 36px;
+    border-radius: 4px;
+    border: 0.536px solid rgba(255, 255, 255, 0.46);
+    backdrop-filter: blur(17.14285659790039px);
+    margin: 24px auto;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 14px;
+    padding: 14px 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.popup .popup-inside .popup-deep button{
+    width: 145px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: linear-gradient(96deg, #3561F6 0%, #0FD3FE 100%);
+    backdrop-filter: blur(2px);
+    color: #FFF;
+    border: 1px solid transparent;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.popup .popup-inside .popup-deep .btn{
+    display: flex ;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Desktop Logo styling*/
 
@@ -63,6 +520,15 @@ body{
     line-height: normal;
     position: relative;
     z-index: 1;
+}
+
+.desktop-nav .main-manu li a:hover{
+    color: #3561F6;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .desktop-nav .main-manu li a.active{
@@ -641,7 +1107,7 @@ body{
 
 .animate-card .card {
     width: 259px;
-    height: 272px;
+    height: 280px;
     border-radius: 14px;
     background:
     linear-gradient(rgb(23 17 52), rgb(14 9 43)) padding-box,
@@ -649,11 +1115,11 @@ body{
     backdrop-filter: blur(17.14285659790039px);
     border: 2px solid transparent;
     transition: 0.1s;
+    padding: 30px 28px;
 }
 
 
 .animate-card .card .svg{
-    margin: 32px 0px 0px 32px;
     position: relative;
 }
 
@@ -666,7 +1132,7 @@ body{
 .animate-card .card .card-heading{
     position: relative;
     z-index: 1;
-    margin: 12px 0px 0px 28px;
+    margin: 12px 0px 0px 0px;
     color: #FFF;
     font-family: Plus Jakarta Sans;
     font-size: 16px;
@@ -679,7 +1145,7 @@ body{
     position: relative;
     z-index: 1;
     width: 203px;
-    margin: 12px 28px 35px 28px;
+    margin: 12px 0px 12px 0px;
     color: rgba(255, 255, 255, 0.70);
     font-family: Plus Jakarta Sans;
     font-size: 14px;
@@ -687,7 +1153,6 @@ body{
     font-weight: 500;
     line-height: normal;
 }
-
 
 
 /* services section */
@@ -1150,7 +1615,7 @@ body{
     z-index: 1;
     margin: 88px 0px 0px 0px;
     width: 461px;
-    height: 297px;
+    height: 310px;
     flex-shrink: 0;
     border-radius: 8px;
     border: 0.3px solid transparent;
@@ -1158,7 +1623,7 @@ body{
     linear-gradient( 97deg, rgb(31, 53, 114) 0%, rgb(34, 17, 69) 100%) padding-box,
     linear-gradient(160deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
     backdrop-filter: blur(2px);
-
+    padding: 0px 0px 10px 0px;
 }
 
 .card-upper{
@@ -1255,11 +1720,22 @@ body{
     gap: 34px;
     width: 95%;
     overflow-x: auto;
+    padding: 0px 0px 10px 0px;
 }
 
-.product-new-outer::-webkit-scrollbar{
-    width: 0;
+.product-new-outer::-webkit-scrollbar {
+    width: 0px; 
+    /* height: 5px; */
 }
+
+/* .product-new-outer::-webkit-scrollbar-thumb {
+    background:linear-gradient(268deg, #0FD3FE 8.33%, #0E41ED 66.28%);
+    border-radius: 35%;
+}
+
+.product-new-outer::-webkit-scrollbar-track {
+    background:linear-gradient(270deg, rgba(13, 67, 118, 0.3) 0%, rgba(11, 17, 104, 0.3) 100%);
+} */
 
 .product-card-animate{
     display: flex;
@@ -1273,9 +1749,6 @@ body{
     mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
 }
 
-.product-card-animate:hover .product-new-outer{
-    animation-play-state: paused;
-}
 
 .product-new-outer .product-new-card {
     width: 259px;
@@ -1410,6 +1883,7 @@ body{
 }
 
 .schudule-card .btn{
+    text-decoration: none;
     margin: 0 auto;
     width: 170px;
     height: 48px;
@@ -1811,14 +2285,13 @@ footer .footer-logo-section .text{
     z-index: 1;
 }
 
-
-
 .social-media svg:hover path{
     fill: #0084FF;
     stroke: #0084FF;
     fill-opacity:0.9 !important ;
     stroke-width:0.3; 
-  }
+    transition: 0.8s;
+}
 
 .social-media p{
     color: rgba(255, 255, 255, 0.70);
@@ -2214,6 +2687,103 @@ footer .footer-logo-section .text{
     font-weight: 500;
     line-height: normal;
 }
+
+
+/* contact us sumit message */
+
+
+.contact-card-submit {
+    width: 942px;
+    height: 632px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background:
+    linear-gradient( 97deg, rgb(12 24 58) 0%, rgb(16 14 64) 100%) padding-box,
+    linear-gradient(160deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
+    backdrop-filter: blur(17.14285659790039px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card-submit .svg1{
+    margin: 117px 0px 0px 372px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card-submit .svg2{
+    position: absolute;
+    margin: 130px 0px 0px 538px;
+}
+
+.contact-card-submit h1{
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 48px auto;
+}
+
+.contact-card-submit .inner-text{
+    background: linear-gradient(90deg, #0084FF 63.62%, #0FD3FE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-card-submit p{
+    margin-top: calc(48px - 88px);
+    color: #FFF;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.7;
+}
+
+.contact-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.contact-card-submit .contact-btns button{
+    width: 145px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: linear-gradient(96deg, #3561F6 0%, #0FD3FE 100%);
+    backdrop-filter: blur(2px);
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Animations */
