@@ -913,7 +913,8 @@
 <script type="text/javascript">
   
   function sendForm(){
-  
+    document.getElementById("beforeSubmit").style.display ="none";
+    document.getElementById("afterSubmit").style.display ="block";
   
   fname=document.getElementById('FIRSTNAME').value
   email=document.getElementById('EMAIL').value
@@ -938,8 +939,7 @@
   xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
           console.log(xhr.responseText);
-          document.getElementById("beforeSubmit").style.display ="none";
-          document.getElementById("afterSubmit").style.display ="block";
+          
       }
   };
   
