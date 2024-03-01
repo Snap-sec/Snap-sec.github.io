@@ -1,0 +1,149 @@
+  <nav class="mobileNav" id="ToAddheight">
+    <div class="Logo_button">
+      <div class="logo">
+        <a href="index.html" class="image">
+          <img src="public/images/logo.svg" alt="" />
+        </a>
+        <p class="logo-text">Snapsec</p>
+      </div>
+      <div class="button" id="NavBarButton">
+        <svg onclick="addManu()" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+          <g opacity="0.7">
+            <line x1="1" y1="1" x2="23" y2="1" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <line x1="1" y1="9" x2="23" y2="9" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <line x1="1" y1="17" x2="23" y2="17" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul class="main-manu" id="manu" style="display: none;">
+      <li class="product-btn">
+        <a href="#">Product</a>
+        <i id="product_btnDown" onclick="ToShowProduct()" class="fa-solid fa-angle-down"></i>
+        <i id="product_btnUp" onclick="ToHideProduct()" class="fa-solid fa-angle-up"></i>
+      </li>
+      <ul id="Product_btnManu" class="hide">
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/asm.svg">
+          </div>
+          <a href="products/asm.html">Attack Surface Management</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/vm.svg">
+          </div>
+          <a href="products/csm.html">Vulnerability Management</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/employeeTraining.svg">
+          </div>
+          <a href="products/vdp.html">Vulnerability Disclosure Management</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/secretMonetering.svg">
+          </div>
+          <a href="products/comming.html?p=smm">Secret Scanning & Monitoring System </a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/phishing.svg">
+          </div>
+          <a href="products/comming.html?p=ps">Phishing Simulator</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/apiSecurity.svg">
+          </div>
+          <a href="products/comming.html?p=apisec">API Security Management</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/mobileApplication.svg">
+          </div>
+          <a href="products/comming.html?p=masm">Mobile Application Security management</a>
+        </li>
+      </ul>
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li class="service-btn">
+        <a href="#">Service</a>
+        <i id="Service_btnDown" onclick="ToShowServices()" class="fa-solid fa-angle-down"></i>
+        <i id="Service_btnUp" style="color: white;" onclick="ToHideServices()" class="fa-solid fa-angle-up"></i>
+      </li>
+      <ul id="service_manu" class="hide">
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/vapt.svg">
+          </div>
+          <a href="/services.html#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/cst.svg">
+          </div>
+          <a href="/services.html#DST">Cloud Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/continuest.svg">
+          </div>
+          <a href="/services.html#CST">Continious Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/acme.svg">
+          </div>
+          <a href="/services.html#ACME">Access Control Model Evaluation </a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/mapt.svg">
+          </div>
+          <a href="/services.html#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/ipt.svg">
+          </div>
+          <a href="/services.html#IPT">Infrastructure Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/ast.svg">
+          </div>
+          <a href="/services.html#AST">API Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/cr.svg">
+          </div>
+          <a href="/services.html#CR">Code Review</a>
+        </li>
+      </ul>
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li>
+        <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li>
+        <a href="contact-us.html" style="color: #0084FF;">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
