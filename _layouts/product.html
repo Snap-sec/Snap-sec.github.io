@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" href="../public/images/logo.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Josefin+Sans:wght@100;400;500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+    rel="stylesheet">
+  <title> {{ page.title  }} - Snapsec </title>
+  <link rel="stylesheet" type="text/css" href="../public/style.css">
+  <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  function setActiveClass() {
+    var currentUrl = window.location.pathname;
+
+    var links = document.querySelectorAll('.main-manu a');
+    links.forEach(function (link) {
+      link.classList.remove('active');
+    });
+
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setActiveClass);
+</script>
+
+
+<body class="lazy-load-animations">
+  <div class="desktop">
+
+
+
+  
+  {%  include mobile_nav.html %}
+
+  {% include desktop_nav.html %}
+
+
+
+
+
+
+
+
+
+
+  <div class="hero-container">
+    <h1 class="main-text">
+      <span class="inner-text">{{ page.title }}</span> Platform
+    </h1>
+    <p class="small-text">
+      {{ page.desc }}
+    </p>
+
+    <div class="mid-Btn">
+      <a href="#ytube" class="href-tag">
+        <div class="tutorial-btn">
+          <p>Watch Tutorial</p>
+          
+        </div>
+      </a>
+      <a href="../contact-us"><button class="btn">
+          <span>Talk To Expert</span>
+        </button></a>
+    </div>
+
+    <img height="800px" class="dashboard-img" src="../public/images/product/{{ page.code }}/0.png">
+    <div class="wave-svg">
+      <img src="../public/images/wave.png">
+    </div>
+
+    <div class="Mob_Buttons">
+      <div class="TutorButn">
+        <p>Watch Tutorial</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+          <path d="M7.793 0.292786C7.98053 0.105315 8.23484 0 8.5 0C8.76516 0 9.01947 0.105315 9.207 0.292786L13.707 4.79279C13.8945 4.98031 13.9998 5.23462 13.9998 5.49979C13.9998 5.76495 13.8945 6.01926 13.707 6.20679L9.207 10.7068C9.0184 10.8889 8.7658 10.9897 8.5036 10.9875C8.2414 10.9852 7.99059 10.88 7.80518 10.6946C7.61977 10.5092 7.5146 10.2584 7.51233 9.99619C7.51005 9.73399 7.61084 9.48139 7.793 9.29279L10.5 6.49979H1C0.734784 6.49979 0.48043 6.39443 0.292893 6.20689C0.105357 6.01936 0 5.765 0 5.49979C0 5.23457 0.105357 4.98022 0.292893 4.79268C0.48043 4.60514 0.734784 4.49979 1 4.49979H10.5L7.793 1.70679C7.60553 1.51926 7.50021 1.26495 7.50021 0.999786C7.50021 0.734622 7.60553 0.480314 7.793 0.292786Z" fill="#3561F6"/>
+        </svg>
+      </div>
+
+      <a href="../contact-us.html">
+        Request A Demo
+      </a>
+    </div>
+  </div>
+
+
+
+  <!-- background../public/images -->
+
+  <div class="AllEclips">
+
+
+
+  <div class="eclips1">
+
+  </div>
+
+  <div class="eclips2">
+
+  </div>
+
+  <div class="eclips3">
+
+  </div>
+
+  <div class="eclips4">
+
+  </div>
+
+  <div class="eclips4">
+
+  </div>
+
+  <div class="eclips5">
+
+  </div>
+
+  <div class="product-eclips1">
+
+  </div>
+
+
+  <div class="product-eclips2">
+
+  </div>
+
+  <div class="product-eclips3">
+
+  </div>
+
+
+  <div class="product-eclips4">
+
+  </div>
+</div>
+
+<div class="Mob_eclips notFroWeb ">
+
+  <div class="Eclps1">
+
+  </div>
+
+  <div class="Eclps2">
+
+  </div>
+
+  
+  <div class="Eclps3">
+
+  </div>
+
+</div>
+  <!-- Eclips ends here -->
+
+  <!-- product highlights starts here -->
+
+
+
+
+
+  <div class="heading">
+    <div>
+      <p class="big-text">{{ page.tagline_1_main }}</p>
+      <p class="small-text">{{ page.tagline_1_small }}</p>
+    </div>
+  </div>
+  <div class="product-h">
+
+
+{% for f in page.allFeatures %}
+
+    <div class="product-inner">
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_2438_1268)"/>
+      <defs>
+        <linearGradient id="paint0_linear_2438_1268" x1="2.21138" y1="32" x2="32" y2="2.21138" gradientUnits="userSpaceOnUse">
+          <stop offset="0.00214992" stop-color="#0E41ED"/>
+          <stop offset="1" stop-color="#0FD3FE"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="Mob_div">
+    <h3 class="name">{{ f.name }}</h3>
+    <p class="text">
+      {{ f.desc }}
+    </p>
+    <a href="#" class="learn-more">Learn More</a>
+  </div>
+</div>
+
+{% endfor %}
+
+
+  </div>
+
+
+
+
+  <!-- product highlights ends here -->
+
+
+  <div class="testimonials">
+    <h1 class="testimonials-heading">
+      {{ page.tagline_2_main }}
+      
+
+    </h1>
+    <p class="testimonials-text">
+      {{ page.tagline_2_small }}
+      
+      
+    </p>
+  </div>
+
+
+
+
+  <div class="product NotOnPhone">
+    <div class="side-cards">
+      <div class="product-card1">
+        <div>
+          <img src="../public/images/product/{{ page.code }}/1.png" style="border-radius: 15px;">
+        </div>
+        <div>
+          <h3> {{ page.mainFeature_1_Title }} </h3>
+          <p> {{ page.mainFeature_1_Desc }}</p>
+        </div>
+      </div>
+      <div class="product-card2">
+        <div>
+          <h3>{{ page.mainFeature_2_Title }}</h3>
+          <p>{{ page.mainFeature_2_Desc }}</p>
+        </div>
+        <div>
+          <img src="../public/images/product/{{ page.code }}/2.png" style="border-radius: 15px;" > 
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card3">
+      <img src="../public/images/product/{{ page.code }}/3.png" style="border-radius: 15px;" > 
+      <h3>{{ page.mainFeature_3_Title }}</h3>
+      <p>{{ page.mainFeature_3_Desc }}</p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Testimonials  Start -->
+
+
+
+
+{% include product_testimonials.html %}
+
+
+
+    <!-- Youtube video here -->
+
+    <div class="testimonials">
+      <h1 class="testimonials-heading">
+        A quick guide to <span class="inner-text">Disruptive Featuresx</span><br> ASM has to offer
+      </h1>
+      <p class="testimonials-text">
+        An enterprise SaaS built to deliver powerful and flexible vulnerability Management.
+      </p>
+    </div>
+
+
+    <div id="ytube" class="youtube-video">
+      <iframe width="940" height="506" src="{{ page.videoURL }}"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+
+    </div>
+
+    <!-- Schudule Card -->
+
+
+
+    <div class="schudule-card">
+      <img class="bg-img" src="../public/images/wave2.png">
+      <p class="schudule-text">
+        Don't Wait for a Breach! Schedule a Free <span class="inner-text"> Cybersecurity </span> Consultation Today.
+      </p>
+      <div class="btn">
+        <p class="text">Talk To Expert</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <br>
+    <br>
+ 
+
+ <footer>
+  <div class="footer">
+    <div class="footer-logo-section">
+      <div class="name-logo">
+        <img class="image" src="../public/images/logo.svg">
+        <h3 class="name">Snapsec</h3>
+      </div>
+
+      <p class="text">
+        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Company
+      </h3>
+      <ul>
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+        </li>
+       <!--  <li>
+          <a href="#">Case Studies</a>
+        </li> -->
+        <!-- <li>
+          <a href="https://snapsec.co/blog/">Our Blog</a>
+        </li> -->
+        <li>
+          <a href="#">Terms & Conditions</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Services
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="/services#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <li>
+          <a href="/services#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+        <li>
+          <a href="/services#IPT">Infrastructure Penetration Testing</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Products
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="/products/csm.html">Vulnerability Management</a>
+        </li>
+        <li>
+          <a href="/products/asm.html">Attack Surface Management </a>
+        </li>
+        <li>
+          <a href="/products/comming.html?p=ps">Phishing Simulator</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Contact Us
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
+        </li>
+        <li>
+          <a href="#">Phone UK: +441917431771</a>
+        </li>
+        <li>
+          <a href="#">Phone IN: +917780908136</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="Mob_footer notFroWeb">
+    <div class="footer-logo-section NotOnPhone">
+      <div class="name-logo">
+        <img class="image" src="public/images/logo.svg">
+        <h3 class="name">Snapsec</h3>
+      </div>
+
+      <p class="text">
+        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Company
+      </h3>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+        </li>
+       <!--  <li>
+          <a href="#">Case Studies</a>
+        </li> -->
+        <!-- <li>
+          <a href="https://snapsec.co/blog/">Our Blog</a>
+        </li> -->
+        <li>
+          <a href="#">Terms & Conditions</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Services
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="services#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <li>
+          <a href="services#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Products
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="products/csm.html">Vulnerability Management</a>
+        </li>
+        <li>
+          <a href="products/asm.html">Attack Surface Management </a>
+        </li>
+        <li>
+          <a href="products/comming.html?p=ps">Phishing Simulator</a>
+        </li>
+        <li>
+          <a href="products/vdp.html">Vulnerability Disclosure Management</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Contact Us
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
+        </li>
+        <li>
+          <a href="#">Phone UK: +441917431771</a>
+        </li>
+        <li>
+          <a href="#">Phone IN: +917780908136</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+
+<script>
+  
+      function productColor(){
+           document.getElementsByClassName('productBtnColor')[0].style.color = "#3561F6";
+       }
+
+
+       serviceLinks=document.getElementsByClassName('serviceLink')
+       productLinks=document.getElementsByClassName('productLink')
+       serviceNav = document.getElementById('Service-Tab');
+       productNav = document.getElementById('Product-Tab');
+       hoverLinks=document.getElementsByClassName('hover-links')
+       bodyTag=document.getElementsByClassName('hero-container')[0]
+
+
+
+       for (var i = 0; i < serviceLinks.length; i++) {
+    serviceLinks[i].addEventListener('mouseover', function() {
+        console.log('on Service');
+         serviceNav.style.display = "block";
+        productNav.style.display="none"
+    });
+}
+
+
+  
+       for (var i = 0; i < productLinks.length; i++) {
+    productLinks[i].addEventListener('mouseover', function() {
+        console.log('on product');
+         serviceNav.style.display = "none";
+         productNav.style.display="block"
+    });
+}
+
+
+
+
+
+    bodyTag.addEventListener('mouseout', function() {
+         // serviceNav.style.display = "none";
+        productNav.style.display="none"
+        serviceNav.style.display="none"
+    });
+
+
+     // This is for Navbar
+
+     navbarButton = document.getElementById('NavBarButton');
+
+function addManu(){
+ document.body.style.overflow = 'hidden';
+ document.getElementById('manu').style.display = "block";
+ document.getElementById('ToAddheight').style.height = "750px";
+ document.getElementById('manu').style.background = "rgba(3, 4, 33, 0.60)";
+
+   navbarButton.innerHTML = `
+   <i class="fa-solid fa-xmark" onclick="RemoveMainManu()" style="font-size:20px;opacity:0.6;margin-left:4px"></i>
+   `; 
+}
+
+
+ function RemoveMainManu(){
+   document.body.style.overflow = 'scroll';
+   document.getElementById('manu').style.display = "none";
+   document.getElementById('ToAddheight').style.height = "48px";
+   navbarButton.innerHTML = `
+   <svg onclick="addManu()" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+         <g opacity="0.7">
+           <line x1="1" y1="1" x2="23" y2="1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+           <line x1="1" y1="9" x2="23" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+           <line x1="1" y1="17" x2="23" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+         </g>
+       </svg>
+   `
+     }
+
+
+      //Product nav
+      Product_Manu = document.getElementById('Product_btnManu')
+
+      function ToShowProduct(){
+        //For service To remove when click on product
+        service_Manu.classList.add('hide');
+        document.getElementById('Service_btnUp').style.display = 'none';
+        document.getElementById('Service_btnDown').style.display = 'block';
+
+        
+        Product_Manu.classList.add('show');
+        Product_Manu.classList.remove('hide');
+        document.getElementById('product_btnDown').style.display="none";
+        document.getElementById('product_btnUp').style.display="block";
+      }
+
+      function ToHideProduct(){
+          Product_Manu.classList.remove('show');
+          Product_Manu.classList.add('hide');
+          document.getElementById('product_btnDown').style.display="block";
+          document.getElementById('product_btnUp').style.display="none";
+      }
+
+
+      //Services nav
+
+      service_Manu = document.getElementById('service_manu')
+
+      function ToShowServices(){
+        //For Products To remove when click on service
+        Product_Manu.classList.add('hide');
+        document.getElementById('product_btnDown').style.display="block";
+        document.getElementById('product_btnUp').style.display="none";
+
+
+        service_Manu.classList.add('show');
+        service_Manu.classList.remove('hide');
+        document.getElementById('Service_btnDown').style.display = 'none';
+        document.getElementById('Service_btnUp').style.display = 'block';
+      }
+
+      function ToHideServices(){
+        service_Manu.classList.add('hide');
+        service_Manu.classList.remove('show');
+        document.getElementById('Service_btnUp').style.display = 'none';
+        document.getElementById('Service_btnDown').style.display = 'block';
+      }
+      
+
+
+
+</script>
+
+
+
+
+</html>
+      <!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var animatedElements = document.querySelectorAll('.animatedElement');
+
+    var observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          console.log("observed")
+
+          
+          // entry.target.classList.add('active');
+          // observer.unobserve(entry.target);
+          
+          entry.target.classList.forEach(c=>{
+            if(c.includes('_')){
+              newClass=c.split('_')[0]
+              entry.target.classList.remove(c)
+              entry.target.classList.add(newClass)
+            }
+          })
+        
+        
+        
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(function(element) {
+      observer.observe(element);
+    });
+  });
+</script> -->
