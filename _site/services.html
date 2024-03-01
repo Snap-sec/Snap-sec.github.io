@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" href="public/images/logo.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Josefin+Sans:wght@100;400;500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+    rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+  <title>Services - Snapsec</title>
+  <link rel="stylesheet" type="text/css" href="public/style.css">
+  <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  function setActiveClass() {
+    var currentUrl = window.location.pathname;
+
+    var links = document.querySelectorAll('.main-manu a');
+    links.forEach(function (link) {
+      link.classList.remove('active');
+    });
+
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setActiveClass);
+</script>
+
+
+<body class="lazy-load-animations">
+  <div class="desktop">
+    
+
+
+  <!-- Mobile Nav Strats Here -->
+  
+    <nav class="mobileNav" id="ToAddheight">
+    <div class="Logo_button">
+      <div class="logo">
+        <a href="index.html" class="image">
+          <img src="public/images/logo.svg" alt="" />
+        </a>
+        <p class="logo-text">Snapsec</p>
+      </div>
+      <div class="button" id="NavBarButton">
+        <svg onclick="addManu()" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+          <g opacity="0.7">
+            <line x1="1" y1="1" x2="23" y2="1" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <line x1="1" y1="9" x2="23" y2="9" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <line x1="1" y1="17" x2="23" y2="17" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <ul class="main-manu" id="manu" style="display: none;">
+
+      <li class="product-btn">
+        <a href="#">Product</a>
+        <i id="product_btnDown" onclick="ToShowProduct()" class="fa-solid fa-angle-down"></i>
+        <i id="product_btnUp" onclick="ToHideProduct()" class="fa-solid fa-angle-up"></i>
+      </li>
+      <ul id="Product_btnManu" class="hide">
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/asm.svg">
+          </div>
+          <a href="products/asm.html">Attack Surface Management</a>
+        </li>
+        
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/vm.svg">
+          </div>
+          <a href="products/csm.html">Vulnerability Management</a>
+        </li>
+
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/employeeTraining.svg">
+          </div>
+          <a href="products/vdp.html">Vulnerability Disclosure Management</a>
+        </li>
+
+        <!-- <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/secretMonetering.svg">
+          </div>
+          <a href="products/comming.html?p=smm">Secret Scanning & Monitoring System </a>
+        </li> -->
+
+       <!--  <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/phishing.svg">
+          </div>
+          <a href="products/comming.html?p=ps">Phishing Simulator</a>
+        </li> -->
+
+      <!--   <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/apiSecurity.svg">
+          </div>
+          <a href="products/comming.html?p=apisec">API Security Management</a>
+        </li> -->
+
+        <!-- <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/products/mobileApplication.svg">
+          </div>
+          <a href="products/comming.html?p=masm">Mobile Application Security management</a>
+        </li> -->
+      </ul>
+
+
+
+
+
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li class="service-btn">
+        <a href="#">Service</a>
+        <i id="Service_btnDown" onclick="ToShowServices()" class="fa-solid fa-angle-down"></i>
+        <i id="Service_btnUp" style="color: white;" onclick="ToHideServices()" class="fa-solid fa-angle-up"></i>
+      </li>
+      <ul id="service_manu" class="hide">
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/vapt.svg">
+          </div>
+          <a href="/services.html#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/cst.svg">
+          </div>
+          <a href="/services.html#DST">Cloud Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/continuest.svg">
+          </div>
+          <a href="/services.html#CST">Continious Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/acme.svg">
+          </div>
+          <a href="/services.html#ACME">Access Control Model Evaluation </a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/mapt.svg">
+          </div>
+          <a href="/services.html#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/ipt.svg">
+          </div>
+          <a href="/services.html#IPT">Infrastructure Penetration Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/ast.svg">
+          </div>
+          <a href="/services.html#AST">API Security Testing</a>
+        </li>
+        <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+        <li>
+          <div>
+            <img src="public/images/MobNavBarSvgs/services/cr.svg">
+          </div>
+          <a href="/services.html#CR">Code Review</a>
+        </li>
+      </ul>
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li>
+        <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <div style="height: 1px;background: rgba(53, 97, 246, 0.20);width: 100%;margin: 12px auto;"></div>
+      <li>
+        <a href="contact-us.html" style="color: #0084FF;">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Desktop Navbar Start -->
+<nav class="desktop-nav">
+  <div class="logo">
+    <a href="/" class="image">
+      <img src="public/images/logo.svg" alt="" />
+    </a>
+    <p class="logo-text">Snapsec</p>
+  </div>
+  <ul class="main-manu">
+    <li>
+      <a href="/index.html" class="active">Home</a>
+    </li>
+    <li>
+      <a href="/#" class="productLink" id="product-hover">Product</a>
+    </li>
+    <li>
+      <a href="/#" class="serviceLink" id="service-hover">Service</a>
+    </li>
+    <li>
+      <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+    </li>
+    <li>
+      <a href="/contact-us.html">Contact Us</a>
+    </li>
+  </ul>
+  <a href="/contact-us.html">
+    <button class="btn"> Get Started </button>
+  </a>
+</nav>
+<!-- Desktop Navbar End -->
+<!-- Desktop Navbar When you hover of Services Link -->
+<div class="service-hover" id="Service-Tab" style="display: none;">
+  <nav class="service-hover-nav">
+    <div class="logo">
+      <a href="/" class="image">
+        <img src="public/images/logo.svg" alt="" />
+      </a>
+      <p class="logo-text">Snapsec</p>
+    </div>
+    <ul class="main-manu">
+      <li>
+        <a href="/index.html" class="active">Home</a>
+      </li>
+      <li>
+        <a href="/#" class="productLink" id="productInnerHover">Product</a>
+      </li>
+      <li>
+        <a href="/services.html" class="serviceLink">Service</a>
+      </li>
+      <li>
+        <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="/contact-us.html">Contact Us</a>
+      </li>
+    </ul>
+    <a href="/contact-us.html">
+      <button class="btn"> Get Started </button>
+    </a>
+  </nav>
+  <div class="navbar-line"></div>
+  <div class="hover-links">
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/1.svg">
+      </div>
+      <a href="/services.html#VSPT">Vulnerability assesment and Penetration Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/2.svg">
+      </div>
+      <a href="/services.html#DST">Cloud Security Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/3.svg">
+      </div>
+      <a href="/services.html#CST">Continious Security Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/4.svg">
+      </div>
+      <a href="/services.html#ACME">Access Control Model Evaluation </a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/5.svg">
+      </div>
+      <a href="/services.html#MAPT">Mobile Application Penetration Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/6.svg">
+      </div>
+      <a href="/services.html#IPT">Infrastructure Penetration Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/6.svg">
+      </div>
+      <a href="/services.html#AST">API Security Testing</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/services/icons/6.svg">
+      </div>
+      <a href="/services.html#CR">Code Review</a>
+    </div>
+    <div class="link">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.3307 14.904 16.2256 14.887 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.3754 15.9304 8.06961 13.6246 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.69065 6.41806 8.49821 5.2128 8.5 4C8.5 3.45 8.05 3 7.5 3Z" fill="#3561F6" />
+        </svg>
+      </div>
+      <a href="/contact-us.html" class="new-style">Schedule a meeting to know more</a>
+    </div>
+  </div>
+</div>
+<!-- Desktop Navbar When you hover of Services Link -->
+
+
+
+<!-- Desktop Navbar When you hover of Product Link -->
+<div class="Product-hover" id="Product-Tab" style="display: none;">
+  <nav class="product-hover-nav">
+    <div class="logo">
+      <a href="/" class="image">
+        <img src="public/images/logo.svg" alt="" />
+      </a>
+      <p class="logo-text">Snapsec</p>
+    </div>
+    <ul class="main-manu">
+      <li>
+        <a href="/index.html" class="active">Home</a>
+      </li>
+      <li>
+        <a href="/#" class="productLink">Product</a>
+      </li>
+      <li>
+        <a href="/#" class="serviceLink" id="serviceInnerHover">Service</a>
+      </li>
+      <li>
+        <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="/contact-us.html">Contact Us</a>
+      </li>
+    </ul>
+    <a href="/contact-us.html">
+      <button class="btn"> Get Started </button>
+    </a>
+  </nav>
+  <div class="navbar-line"></div>
+  <div class="hover-links">
+    
+
+
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/1.svg">
+      </div>
+      <a href="/products/asm.html">Attack Surface Management</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/2.svg">
+      </div>
+      <a href="/products/csm.html">Vulnerability Management</a>
+    </div>
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/3.svg">
+      </div>
+      <a href="/products/vdp.html">Vulnerability Disclosure Management</a>
+    </div>
+
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/5.svg">
+      </div>
+      <a href="/products/tms.html">Employee Training Managament</a>
+    </div>
+
+
+
+    <div class="link">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M6.54 5C6.6 5.89 6.75 6.76 6.99 7.59L5.79 8.79C5.38 7.59 5.12 6.32 5.03 5H6.54ZM16.4 17.02C17.25 17.26 18.12 17.41 19 17.47V18.96C17.68 18.87 16.41 18.61 15.2 18.21L16.4 17.02ZM7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.51C21 15.96 20.55 15.51 20 15.51C18.76 15.51 17.55 15.31 16.43 14.94C16.3307 14.904 16.2256 14.887 16.12 14.89C15.86 14.89 15.61 14.99 15.41 15.18L13.21 17.38C10.3754 15.9304 8.06961 13.6246 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.69065 6.41806 8.49821 5.2128 8.5 4C8.5 3.45 8.05 3 7.5 3Z" fill="#3561F6" />
+        </svg>
+      </div>
+      <a href="/contact-us.html" class="new-style">Schedule a meeting to know more</a>
+    </div>
+    
+    <div class="link"></div>
+  </div>
+</div>
+<!-- Desktop Navbar When you hover of Product Link -->
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hero-container">
+    <h1 class="main-text">
+      Secure Your Digital Assets With <br> Our <span class="inner-text">Comprehensive Services.</span>
+    </h1>
+    <p class="small-text">
+      We offer a comprehensive suite of services to help you protect your digital <br> assets and reduce your security
+      risks.
+    </p>
+
+    <!-- <div class="wave-svg">
+        <img src="public/images/wave.png">
+      </div> -->
+  </div><br><br>
+
+  
+  <div class="Mob_services notFroWeb">
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/1.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Vulnerability assesment and Penetration Testing</h3>
+        <p class="card-text">
+          VAPT services are for organisation who want to detect and fix security weaknesses in Web-Apps, networks, and
+          publicly facing systems, safeguarding organizations from financial and reputational harm.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/2.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Mobile Application Penetration Testing</h3>
+        <p class="card-text">
+          For sensitive mobile apps, this service safeguards customer data. Vulnerable Android or Web Apps pose equal
+          security risks for customer information. Ideal for organizations handling critical functionalities and data.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/3.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Infrastructure Penetration Testing</h3>
+        <p class="card-text">
+          Infrastructure Penetration Testing (IPT) is a comprehensive evaluation of organizational networks, servers, and
+          infrastructure components. By identifying and addressing vulnerabilities, IPT enhances cybersecurity resilience,
+          mitigating potential financial and reputational risks.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/4.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Vulnerability Scanning</h3>
+        <p class="card-text">
+          Vulnerability scanning software aids organizations in regularly testing applications and infrastructure, detecting issues proactively. Crucial for companies deploying code frequently, as changes impact logic, tech stack, dependencies, and introduce vulnerabilities to production servers.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/5.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">API Security Testing</h3>
+        <p class="card-text">
+          API security service is offered to any orginisation running REST, GraphQL, and SOAP. We offer API security assesment service to companies with their API integrated their web application as well as to the companies who have an Seperate API as an service to their customers.        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/6.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Continuous Security Testing</h3>
+        <p class="card-text">
+          Our service caters to companies frequently pushing code to production servers. Code changes impact logic, tech stack, dependencies, and may introduce new vulnerabilities. We help organizations continuously test applications and infrastructure, maintaining a vigilant eye on any potential risks in their network or application.  </p>      
+          <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/7.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Code Review</h3>
+        <p class="card-text">
+          Our Code Review service is ideal for organizations and businesses of all sizes that develop software applications. Whether you're a startup, an established company, or a software development agency, our code review expertise can benefit you. We cater to a wide range of industries, including finance, healthcare, e-commerce, and more        </p>      
+          <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/8.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Cloud Security Testing</h3>
+        <p class="card-text">
+          Cloud Security Testing benefits businesses of all sizes using public, private, or hybrid clouds. Crucial for those handling sensitive data, financial transactions, or relying on cloud-based applications. Our service caters to banking, healthcare, e-commerce, and technology industries, ensuring robust security measures for cloud utilization.          
+          </p>
+          <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="image">
+        <img src="public/images/services/9.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Attack Surface Detection and Reduction</h3>
+        <p class="card-text">
+          Attack Surface Detection and Reduction (ASDR) involves identifying and minimizing the exposed entry points and potential vulnerabilities in a system. By analyzing and mitigating attack surfaces, ASDR enhances cybersecurity, reducing the risk of unauthorized access and potential exploits.
+          </p>        
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <svg style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+              <path d="M8.293 0.292786C8.48053 0.105315 8.73484 0 9 0C9.26516 0 9.51947 0.105315 9.707 0.292786L14.207 4.79279C14.3945 4.98031 14.4998 5.23462 14.4998 5.49979C14.4998 5.76495 14.3945 6.01926 14.207 6.20679L9.707 10.7068C9.5184 10.8889 9.2658 10.9897 9.0036 10.9875C8.7414 10.9852 8.49059 10.88 8.30518 10.6946C8.11977 10.5092 8.0146 10.2584 8.01233 9.99619C8.01005 9.73399 8.11084 9.48139 8.293 9.29279L11 6.49979H1.5C1.23478 6.49979 0.98043 6.39443 0.792893 6.20689C0.605357 6.01936 0.5 5.765 0.5 5.49979C0.5 5.23457 0.605357 4.98022 0.792893 4.79268C0.98043 4.60514 1.23478 4.49979 1.5 4.49979H11L8.293 1.70679C8.10553 1.51926 8.00021 1.26495 8.00021 0.999786C8.00021 0.734622 8.10553 0.480314 8.293 0.292786Z" fill="#3561F6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    
+  
+  </div>
+
+
+
+  <!-- backgroundpublic/images -->
+
+
+  <div class="AllEclips">
+
+ 
+  <div class="eclips1">
+
+  </div>
+
+  <div class="eclips2">
+
+  </div>
+
+  <!-- <div class="square">
+        <img src="public/images/Rectangle1.svg">
+      </div> -->
+
+  <div class="eclips3">
+
+  </div>
+
+  <!-- <div class="eclips4">
+
+      </div> -->
+
+  <div class="service-eclips4">
+
+  </div>
+
+  <div class="service-eclips5">
+
+  </div>
+
+  <div class="service-eclips6">
+
+  </div>
+
+  <div class="service-eclips7">
+
+  </div>
+</div>
+
+
+
+<div class="Mob_eclips notFroWeb ">
+
+  <div class="Eclps1">
+
+  </div>
+
+  <div class="Eclps2">
+
+  </div>
+
+  
+  <div class="Eclps3">
+
+  </div>
+
+</div>
+  <!--   <div class="eclips5">
+
+      </div>
+
+      <div class="eclips6">
+
+      </div>
+
+      <div class="eclips7">
+
+      </div>
+
+      <div class="eclips8">
+
+      </div>
+
+      <div class="eclips9">
+
+      </div> -->
+  <!-- 
+      <div class="background1">
+
+      </div> -->
+
+  <!-- <div class="circle">
+        <img src="public/images/circle1.svg">
+      </div> -->
+
+
+
+
+
+  <!-- backgroundpublic/images End -->
+
+  <!-----  services section  -->
+
+  <div class="services NotOnPhone">
+
+    <div class="service-card" id="VSPT">
+      <div class="image">
+        <img src="public/images/services/1.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Vulnerability assesment and Penetration Testing</h3>
+        <p class="card-text">
+          VAPT services are for organisation who want to detect and fix security weaknesses in Web-Apps, networks, and
+          publicly facing systems, safeguarding organizations from financial and reputational harm.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card2" id="MAPT">
+      <div class="text">
+        <h3 class="card-heading">Mobile Application Penetration Testing</h3>
+        <p class="card-text">
+          For sensitive mobile apps, this service safeguards customer data. Vulnerable Android or Web Apps pose equal
+          security risks for customer information. Ideal for organizations handling critical functionalities and data.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+      <div class="image">
+        <img src="public/images/services/2.svg">
+      </div>
+    </div>
+
+    <div class="service-card" id="IPT">
+      <div class="image">
+        <img src="public/images/services/3.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Infrastructure Penetration Testing</h3>
+        <p class="card-text">
+          Infrastructure Penetration Testing (IPT) is a comprehensive evaluation of organizational networks, servers, and infrastructure components. By identifying and addressing vulnerabilities, IPT enhances cybersecurity resilience, mitigating potential financial and reputational risks.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card2" id="VS">
+      <div class="text">
+        <h3 class="card-heading">Vulnerability Scanning</h3>
+        <p class="card-text">
+          Vulnerability scanning software aids organizations in regularly testing applications and infrastructure, detecting issues proactively. Crucial for companies deploying code frequently, as changes impact logic, tech stack, dependencies, and introduce vulnerabilities to production servers.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+      <div class="image">
+        <img src="public/images/services/4.svg">
+      </div>
+    </div>
+
+    <div class="service-card" id="AST">
+      <div class="image">
+        <img src="public/images/services/5.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading"> API Security Testing</h3>
+        <p class="card-text">
+         API security service is offered to any orginisation running REST, GraphQL, and SOAP. We offer API security assesment service to companies with their API integrated their web application as well as to the companies who have an Seperate API as an service to their customers.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card2" id="CST">
+      <div class="text">
+        <h3 class="card-heading">Continuous Security Testing</h3>
+        <p class="card-text">
+          
+Our service caters to companies frequently pushing code to production servers. Code changes impact logic, tech stack, dependencies, and may introduce new vulnerabilities. We help organizations continuously test applications and infrastructure, maintaining a vigilant eye on any potential risks in their network or application.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+      <div class="image">
+        <img src="public/images/services/6.svg">
+      </div>
+    </div>
+
+    <div class="service-card" id="CR">
+      <div class="image">
+        <img src="public/images/services/7.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Code Review</h3>
+        <p class="card-text">
+          
+Our Code Review service is ideal for organizations and businesses of all sizes that develop software applications. Whether you're a startup, an established company, or a software development agency, our code review expertise can benefit you. We cater to a wide range of industries, including finance, healthcare, e-commerce, and more
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="service-card2" id="DST">
+      <div class="text">
+        <h3 class="card-heading">Cloud Security Testing</h3>
+        <p class="card-text">
+          
+Cloud Security Testing benefits businesses of all sizes using public, private, or hybrid clouds. Crucial for those handling sensitive data, financial transactions, or relying on cloud-based applications. Our service caters to banking, healthcare, e-commerce, and technology industries, ensuring robust security measures for cloud utilization.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+      <div class="image">
+        <img src="public/images/services/8.svg">
+      </div>
+    </div>
+
+    <div class="service-card" id="ASDR">
+      <div class="image">
+        <img src="public/images/services/9.svg">
+      </div>
+      <div class="text">
+        <h3 class="card-heading">Attack Surface Detection and Reduction        </h3>
+        <p class="card-text">
+          Attack Surface Detection and Reduction (ASDR) involves identifying and minimizing the exposed entry points and potential vulnerabilities in a system. By analyzing and mitigating attack surfaces, ASDR enhances cybersecurity, reducing the risk of unauthorized access and potential exploits.
+        </p>
+        <a href="contact-us.html" class="href-tag">
+          <div class="see-more-btn">
+            <p class="see-text">read more</p>
+            <img src="public/images/arrow.svg">
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div><br><br><br>
+
+  <!-- Schudule Card -->
+
+
+  <div class="schudule-card">
+    <img class="bg-img" src="public/images/wave2.png">
+    <p class="schudule-text">
+      Don't Wait for a Breach! Schedule a Free <span class="inner-text"> Cybersecurity </span> Consultation Today.
+    </p>
+    <div class="btn">
+
+      <a href="contact-us.html" class="href-tag">
+        <p class="text">Talk To Expert</p>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer>
+  <div class="footer NotOnPhone">
+    <div class="footer-logo-section NotOnPhone">
+      <div class="name-logo">
+        <img class="image" src="public/images/logo.svg">
+        <h3 class="name">Snapsec</h3>
+      </div>
+
+      <p class="text">
+        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Company
+      </h3>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+        </li>
+       <!--  <li>
+          <a href="#">Case Studies</a>
+        </li> -->
+        <!-- <li>
+          <a href="https://snapsec.co/blog/">Our Blog</a>
+        </li> -->
+        <li>
+          <a href="#">Terms & Conditions</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Services
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="services#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <li>
+          <a href="services#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+        <li>
+          <a href="services#IPT">Infrastructure Penetration Testing</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Products
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="products/csm.html">Vulnerability Management</a>
+        </li>
+        <li>
+          <a href="products/asm.html">Attack Surface Management </a>
+        </li>
+        <li>
+          <a href="products/comming.html?p=ps">Phishing Simulator</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Contact Us
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
+        </li>
+        <li>
+          <a href="#">Phone UK: +441917431771</a>
+        </li>
+        <li>
+          <a href="#">Phone IN: +917780908136</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div class="Mob_footer notFroWeb">
+    <div class="footer-logo-section NotOnPhone">
+      <div class="name-logo">
+        <img class="image" src="public/images/logo.svg">
+        <h3 class="name">Snapsec</h3>
+      </div>
+
+      <p class="text">
+        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
+      </p>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Company
+      </h3>
+      <ul>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+        </li>
+       <!--  <li>
+          <a href="#">Case Studies</a>
+        </li> -->
+        <!-- <li>
+          <a href="https://snapsec.co/blog/">Our Blog</a>
+        </li> -->
+        <li>
+          <a href="#">Terms & Conditions</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Services
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="services#VSPT">Vulnerability assesment and Penetration Testing</a>
+        </li>
+        <li>
+          <a href="services#MAPT">Mobile Application Penetration Testing</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Products
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="products/csm.html">Vulnerability Management</a>
+        </li>
+        <li>
+          <a href="products/asm.html">Attack Surface Management </a>
+        </li>
+        <li>
+          <a href="products/comming.html?p=ps">Phishing Simulator</a>
+        </li>
+        <li>
+          <a href="products/comming.html?p=ps">Employee Training Management</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer-content">
+      <h3 class="name">
+        Contact Us
+      </h3>
+      <ul class="properties">
+        <li>
+          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
+        </li>
+        <li>
+          <a href="#">Phone UK: +441917431771</a>
+        </li>
+        <li>
+          <a href="#">Phone IN: +917780908136</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+<style type="text/css">
+  
+
+
+.navx {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+</style>
+
+
+
+</body>
+
+</html>
+
+
+
+    <script>
+      var cards = document.querySelectorAll('.card');
+
+      var mouseHover = false;
+      var mousePosition = { x: 0, y: 0 };
+      var cardSize = { width: 0, height: 0 };
+      var SCALE_X = 6;
+      var SCALE_Y = 10;
+
+      cards.forEach(function (card) {
+        card.onblur = function () {
+          mouseHover = false;
+        };
+
+        card.onfocus = function () {
+          mouseHover = true;
+        };
+
+        card.onmousemove = function (e) {
+          if (!mouseHover) return;
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          mousePosition = { x, y };
+          cardSize = {
+            width: card.offsetWidth || 0,
+            height: card.offsetHeight || 0,
+          };
+          card.style.transform = `perspective(1000px) rotateX(${(mousePosition.y / cardSize.height) * -(SCALE_Y * 2) + SCALE_Y
+            }deg) rotateY(${(mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X
+            }deg) translateZ(10px)`;
+        };
+
+        card.onmouseout = function () {
+          mouseHover = false;
+          card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+        };
+
+        card.onmouseover = function () {
+          mouseHover = true;
+        };
+      });
+
+
+
+      function enableCardDragScroll() {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        const cardsContainer = document.querySelector('.product-new-outer');
+
+        cardsContainer.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          startX = e.pageX - cardsContainer.offsetLeft;
+          scrollLeft = cardsContainer.scrollLeft;
+          cardsContainer.style.cursor = 'grabbing';
+        });
+
+        cardsContainer.addEventListener('mouseleave', () => {
+          isDragging = false;
+          cardsContainer.style.cursor = 'grab';
+        });
+
+        cardsContainer.addEventListener('mouseup', () => {
+          isDragging = false;
+          cardsContainer.style.cursor = 'grab';
+        });
+
+        cardsContainer.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.pageX - cardsContainer.offsetLeft;
+          const walk = (x - startX) * 1; // Adjust the multiplier for scroll speed
+          cardsContainer.scrollLeft = scrollLeft - walk;
+        });
+      }
+
+      enableCardDragScroll()
+
+
+
+
+    //-------------------   Service and Product hover code
+
+ 
+
+      //Service Btn Hover
+
+      //  function serviceColor(){
+      //      document.getElementsByClassName('ServiceBtnColor')[0].style.color = "#3561F6";
+      //  }
+
+      // serviceTab = document.getElementById('Service-Tab');
+      // serviceHover = document.getElementById('service-hover');
+
+      // ProductInnerHover = document.getElementById('productInnerHover')
+
+      // serviceHover.addEventListener('mouseover', function() {
+      //     serviceTab.style.display = "block";
+      //     setTimeout(function() {
+      //       serviceColor();
+      //     }, 100);
+
+      //     ProductInnerHover.addEventListener('mouseover', function() {
+      //       productTab.style.display = "block";
+      //       setTimeout(function() {
+      //         productColor();
+      //      }, 100);
+      //     console.log("service Link Hovered")
+      //    });
+      // });
+
+      // serviceTab.addEventListener('mouseover', function() {
+      //     serviceTab.style.display = "block";
+      // });
+
+      // serviceTab.addEventListener('mouseout', function() {
+      //     serviceTab.style.display = "none";
+      // });
+
+
+ //Product Btn Hover
+
+
+      function productColor(){
+           document.getElementsByClassName('productBtnColor')[0].style.color = "#3561F6";
+       }
+
+
+       serviceLinks=document.getElementsByClassName('serviceLink')
+       productLinks=document.getElementsByClassName('productLink')
+       serviceNav = document.getElementById('Service-Tab');
+       productNav = document.getElementById('Product-Tab');
+       hoverLinks=document.getElementsByClassName('hover-links')
+       bodyTag=document.getElementsByClassName('hero-container')[0]
+
+
+
+       for (var i = 0; i < serviceLinks.length; i++) {
+    serviceLinks[i].addEventListener('mouseover', function() {
+        console.log('on Service');
+         serviceNav.style.display = "block";
+        productNav.style.display="none"
+
+
+         serviceNav.style.opacity = "1";
+      productNav.style.opacity = "0";
+    });
+}
+
+
+  
+       for (var i = 0; i < productLinks.length; i++) {
+    productLinks[i].addEventListener('mouseover', function() {
+        console.log('on product');
+         serviceNav.style.display = "none";
+         productNav.style.display="block"
+
+         serviceNav.style.opacity = "0";
+      productNav.style.opacity = "1";
+    });
+}
+
+
+
+
+
+    bodyTag.addEventListener('mouseout', function() {
+         // serviceNav.style.display = "none";
+        productNav.style.display="none"
+        serviceNav.style.display="none"
+    });
+
+
+
+
+
+    // This is for Navbar
+
+    navbarButton = document.getElementById('NavBarButton');
+
+   function addManu(){
+    document.body.style.overflow = 'hidden';
+    document.getElementById('manu').style.display = "block";
+    document.getElementById('ToAddheight').style.height = "750px";
+    document.getElementById('manu').style.background = "rgba(3, 4, 33, 0.60)";
+
+      navbarButton.innerHTML = `
+      <i class="fa-solid fa-xmark" onclick="RemoveMainManu()" style="font-size:20px;opacity:0.6;margin-left:4px"></i>
+      `; 
+   }
+
+
+    function RemoveMainManu(){
+      document.body.style.overflow = 'scroll';
+      document.getElementById('manu').style.display = "none";
+      document.getElementById('ToAddheight').style.height = "48px";
+      navbarButton.innerHTML = `
+      <svg onclick="addManu()" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
+            <g opacity="0.7">
+              <line x1="1" y1="1" x2="23" y2="1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <line x1="1" y1="9" x2="23" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <line x1="1" y1="17" x2="23" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </g>
+          </svg>
+      `
+        }
+
+
+
+
+    //Product nav
+      Product_Manu = document.getElementById('Product_btnManu')
+
+      function ToShowProduct(){
+        //For service To remove when click on product
+        service_Manu.classList.add('hide');
+        document.getElementById('Service_btnUp').style.display = 'none';
+        document.getElementById('Service_btnDown').style.display = 'block';
+
+        
+        Product_Manu.classList.add('show');
+        Product_Manu.classList.remove('hide');
+        document.getElementById('product_btnDown').style.display="none";
+        document.getElementById('product_btnUp').style.display="block";
+      }
+
+      function ToHideProduct(){
+          Product_Manu.classList.remove('show');
+          Product_Manu.classList.add('hide');
+          document.getElementById('product_btnDown').style.display="block";
+          document.getElementById('product_btnUp').style.display="none";
+      }
+
+
+      //Services nav
+
+      service_Manu = document.getElementById('service_manu')
+
+      function ToShowServices(){
+        //For Products To remove when click on service
+        Product_Manu.classList.add('hide');
+        document.getElementById('product_btnDown').style.display="block";
+        document.getElementById('product_btnUp').style.display="none";
+
+
+        service_Manu.classList.add('show');
+        service_Manu.classList.remove('hide');
+        document.getElementById('Service_btnDown').style.display = 'none';
+        document.getElementById('Service_btnUp').style.display = 'block';
+      }
+
+      function ToHideServices(){
+        service_Manu.classList.add('hide');
+        service_Manu.classList.remove('show');
+        document.getElementById('Service_btnUp').style.display = 'none';
+        document.getElementById('Service_btnDown').style.display = 'block';
+      }
+      
+
+function sendForm() {
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    var fname = document.getElementById('FIRSTNAME').value;
+    var email = document.getElementById('EMAIL').value;
+    var meeting_desc = document.getElementById('MEETING_DESCRIPTION').value;
+
+    var emptyEmail = document.getElementById('worngEmail');
+    var emptyName = document.getElementById('emptyName');
+
+    if (fname === '') {
+        emptyName.innerHTML = '*Please enter name';
+        if (email !== '') {
+            emptyEmail.innerHTML = '';
+        }
+        return; 
+    } else {
+        emptyName.innerHTML = '';
+    }
+
+    if (email === '') {
+        emptyEmail.innerHTML = '*Please enter email';
+        if (fname !== '') {
+            emptyName.innerHTML = '';
+        }
+        return;
+    } else if (!isValidEmail(email)) {
+        emptyEmail.innerHTML = '*Please enter a valid email address';
+        return;
+    } else {
+
+        document.getElementById("beforeSubmit").style.display = "none";
+        document.getElementById("afterSubmit").style.display = "block";
+
+        var formData = "FIRSTNAME=" + encodeURIComponent(fname) + "&EMAIL=" + encodeURIComponent(email) + "&MEETING_DESCRIPTION=" + encodeURIComponent(meeting_desc);
+
+        var url = 'https://8422075a.sibforms.com/serve/MUIFAMbCkAAh-Z-G9en9C0c_iFGmchMFQ0iSox8kYapsv8zEavBs7ruR--fxBMsmVRat7pmGc9pTSNQYzCdE8iOjhfrHICH7pF8ST-yfDd-5BEy-2ciJJkekOhwojFGibGRxKTy6GyXIt-0xV4Fq0vpf6CoWQqFqC4cVBufltVY5KMVYPUbgr4M5m-gl7otkXMS4dlnNjhRw86FH';
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // console.log(xhr.responseText);
+            }
+        };
+
+        xhr.send(formData);
+    }
+}
+
+    </script>

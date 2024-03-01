@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snapsec - Certification validation</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+
+function checkPDFExists(url, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("HEAD", url, true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status == 200) {
+        // HTTP status 200 indicates success, so the PDF file exists.
+        callback(true);
+      } else {
+        // Any other status code means the file does not exist.
+        callback(false);
+      }
+    }
+  };
+
+  xhr.send();
+}
+
+// Example usage:
+var pdfUrl = "https://example.com/path/to/your.pdf";
+
+
+
+
+
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const certId = urlParams.get('id');
+
+if(certId){
+
+certURL='/certificates/'+certId+'.pdf'
+checkPDFExists(certURL, function (exists) {
+  if (exists) {
+   document.location.href=certURL
+  } else {
+    console.log("PDF file does not exist.");
+  }
+});
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>
