@@ -1,1 +1,128 @@
-404 Not Found
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="icon" href="public/images/logo.svg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Josefin+Sans:wght@100;400;500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+    rel="stylesheet">
+  <title>Snapsec - Your Security, Centralized</title>
+  <link rel="stylesheet" type="text/css" href="public/style.css">
+  <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  function setActiveClass() {
+    var currentUrl = window.location.pathname;
+
+    var links = document.querySelectorAll('.main-manu a');
+    links.forEach(function (link) {
+      link.classList.remove('active');
+    });
+
+    links.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href === currentUrl) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setActiveClass);
+</script>
+
+<style>
+
+#worngEmail{
+  margin-top: -2px;
+  background: linear-gradient(90deg, #ff0000 52%, #fe0f0f 81.1%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#emptyName{
+  margin-top: -2px;
+  background: linear-gradient(90deg, #ff0011 52%, #fe0f0f 81.1%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+#returnBotton{
+      --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    box-sizing: border-box;
+    padding: 0px 30px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background: linear-gradient( 97deg, rgb(12 24 58) 0%, rgb(16 14 64) 100%) padding-box,
+    linear-gradient(160deg,#0084FF66, #FFFFFFB9, #FFFFFF00) border-box;
+    backdrop-filter: blur(2px);
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+}
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="hero-container">
+    <h1 class="main-text">
+      <span class="inner-text">Sorry, </span>  We couldn't<br> find that page!
+    </h1>
+    <p class="small-text">
+404 Not Found    </p>
+
+
+<br>
+<button id="returnBotton" onclick="document.location.href='https://snapsec.co'"> 
+                  Return Home
+              </button>
+    <div class="wave-svg">
+      <img src="public/images/wave.png">
+    </div>
+
+    <div class="profile-img">
+      <!-- <div class="profile-text-img">
+        <div class="profiles">
+          <img src="public/images/profiles/1.png">
+          <img src="public/images/profiles/2.svg">
+          <img src="public/images/profiles/3.svg">
+        </div>
+        <div class="text">
+          <p>Rob Stark, Jon Snow,Imran Parray and <span class="num">2397273</span> others contacted us!</p>
+        </div>
+      </div> -->
+    </div>
+  </div><br><br>
+
+  
+
+</html>
