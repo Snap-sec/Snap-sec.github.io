@@ -817,7 +817,6 @@ body{
     transform: translateX(-50%);
 }
 
-
 .eclips1{
     position: absolute;
     width: 582px;
@@ -4482,3 +4481,408 @@ footer{
 
 
 
+/* =========================== policy page css =====================*/
+
+
+.hero-container .mid-text{
+    margin-top: -5px;
+    display: flex;
+    justify-content: space-between;
+    background: #FFF;
+    width: 100%;
+    padding: 0px 152px;
+    gap: 90px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-container .mid-text .navbar{
+    width: 800px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-container .mid-text .navbar a{
+    text-decoration: none;
+    color: #2C23BE;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.hero-container .mid-text .navbar .mid-line{
+    background: #F00;
+    height: 1px;
+}
+
+.hero-container .mid-text .actual-text .text{
+    text-align: left;
+}
+
+.hero-container .mid-text .actual-text .text h2{
+    color: #2C2C2C;
+    font-family: "Plus Jakarta Sans";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.hero-container .mid-text .actual-text .text p{
+    color: rgba(44, 44, 44, 0.80);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 23px;
+}
+
+.hero-container .mid-text .actual-text .text h4{
+    color: #2C23BE;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 48px 0px 16px 0px;
+}
+
+.hero-container .color-ChnagingDIv{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 80px 152px;
+    gap: 90px;
+    background: #F7F7FF;
+}
+
+.hero-container .color-ChnagingDIv .spaceDiv{
+    width:780px;
+}
+
+.hero-container .color-ChnagingDIv .color-changeDiv{
+    text-align: left;
+}
+
+.hero-container .color-ChnagingDIv .color-changeDiv h2{
+    color: #2C2C2C;
+    font-family: "Plus Jakarta Sans";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.hero-container .color-ChnagingDIv .color-changeDiv p{
+    color: rgba(44, 44, 44, 0.80);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 32px;
+}
+
+.hero-container .color-ChnagingDIv .color-changeDiv h4{
+    color: #2C23BE;
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 48px 0px 16px 0px;
+}
+
+
+
+
+/* =================== price pages css =====================*/
+
+
+.price-card{
+    display: flex;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    width: 942px;
+    height: 661px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 132, 255, 0.40);
+    background: linear-gradient(113deg, rgba(102, 96, 160, 0.30) 0.45%, rgba(66, 62, 104, 0.00) 100.09%);
+    backdrop-filter: blur(17.14285659790039px);
+    padding: 26px 32px;
+    align-items: center;
+    gap: 24px;
+}
+
+/* .price-card .oneside{
+    
+} */
+
+.price-card .oneside h3{
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.price-card .oneside label p{
+    color: rgba(255, 255, 255, 0.60);
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 32px;
+}
+
+.price-card .oneside label .Inp-sel input{
+    width: 346px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background:rgba(102, 102, 102, 0.20);
+    margin-top: 8px;
+    color: #FFF;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 11px 16px;
+}
+
+.price-card .oneside label .Inp-sel{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.price-card .oneside label .Inp-sel select{
+    width: 161px;
+    height: 42px;
+    flex-shrink: 0;
+    border:1px solid transparent;
+    border-radius: 4px;
+    background: rgba(102, 102, 102, 0.20);
+    color: rgba(0, 0, 0, 0.851);
+    font-family: "Plus Jakarta Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0px 16px;
+    margin-top: 6px;
+}
+
+.price-card .oneside label input{
+    width: 519px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(102, 102, 102, 0.20);
+    margin-top: 8px;
+    padding: 11px 16px;
+    border: 1px solid transparent;
+    color: #FFF;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.price-card .oneside label input :placeholder-shown{
+    color: rgba(255, 255, 255, 0.459);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    background: rgba(59, 59, 59, 0.01);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+}
+
+input[type="radio"]:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #3561F6;
+    background: rgba(59, 59, 59, 0.01);
+}
+
+input[type="radio"]:checked + label::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M21 7L9 19L3.5 13.5L4.91 12.09L9 16.17L19.59 5.59L21 7Z' fill='%233561F6'/%3E%3C/svg%3E");
+    width: 29px;
+    height: 29px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-card .oneside .radio{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.price-card .oneside .radio .innerRadio{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.price-card .oneside .radio .innerRadio label{
+    color: rgba(255, 255, 255, 0.60);
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price-card .oneside .buttons{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.price-card .oneside .buttons .button1{
+    width: 254px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 3.406px;
+    border: 1px solid #3561F6;
+    background: rgba(53, 97, 246, 0.15);
+    backdrop-filter: blur(166.5px);
+    color: #3561F6;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14.095px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.price-card .oneside .buttons .button2{
+    width: 253px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background: linear-gradient(200deg, #0FD3FE 9.86%, #0E41ED 58.83%);
+    backdrop-filter: blur(2.142857074737549px);
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.price-card .secondside{
+    width: 335px;
+    height: 593px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(115, 115, 115, 0.20);
+    padding: 16px;
+}
+
+.price-card .secondside .text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.price-card .secondside .text h3{
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.price-card .secondside p{
+    color: rgba(255, 255, 255, 0.70);
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 8px;
+}
+
+.price-card .secondside .backgroundImg{
+    position: relative;
+}
+
+.price-card .secondside .Onimage{
+    position: absolute;
+    margin-top: -180px;
+    margin-left: 24px;
+}
+
+.price-card .secondside .Onimage .assetNameImg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-card .secondside .Onimage .cost{
+    margin-top: 50px;
+}
+
+.price-card .secondside .Onimage .cost h4{
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.price-card .secondside .Onimage .cost h2{
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 8px;
+}
+
+
+ /*============================= Price two css ================ */
+
+ 
