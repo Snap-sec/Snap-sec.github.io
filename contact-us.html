@@ -266,5 +266,11 @@ title: Contact Us
    </a>
   </div>
 
-
+<script>
+ const params = new URLSearchParams(window.location.search);
+const reason = params.get('reason');
+if (reason) {
+    document.getElementById('MEETING_DESCRIPTION').value = reason;
+}
+</script>
 
