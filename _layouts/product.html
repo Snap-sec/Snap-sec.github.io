@@ -35,6 +35,9 @@
   <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
 </head>
 
+
+
+
 <script>
   function setActiveClass() {
     var currentUrl = window.location.pathname;
@@ -52,8 +55,89 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setActiveClass);
+  // New function to fetch product data and alert the product name
+  function fetchProduct() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productParam = urlParams.get('product');
+    
+    if (productParam) {
+      fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+          console.log("data==>",data)
+          
+          if (data[productParam].name) {
+
+            //dashborad img
+            imageName=productParam.toUpperCase()
+            document.getElementsByClassName("dashboard-img")[0].src="../public/images/product/"+imageName+".png";
+           
+           //Taglines
+            document.querySelectorAll(".productName").forEach(element => element.textContent = data[productParam].name);
+            document.querySelectorAll(".tagLine").forEach(element => element.textContent = data[productParam].tagLine);
+            document.querySelectorAll(".tagLine_1_main").forEach(element => element.textContent = data[productParam].tagLine_1_main);
+            document.querySelectorAll(".tagLine_1_sub").forEach(element => element.textContent = data[productParam].tagLine_1_sub);
+            document.querySelectorAll(".tagLine_2_main").forEach(element => element.textContent = data[productParam].tagLine_2_main);
+            document.querySelectorAll(".tagLine_2_sub").forEach(element => element.textContent = data[productParam].tagLine_2_sub);
+            
+           //usecases
+           document.querySelectorAll(".usecase_1_main").forEach(element => element.textContent = data[productParam].usecase_1_main);
+           document.querySelectorAll(".usecase_1_sub").forEach(element => element.textContent = data[productParam].usecase_1_sub);
+           document.querySelectorAll(".usecase_2_main").forEach(element => element.textContent = data[productParam].usecase_2_main);
+           document.querySelectorAll(".usecase_2_sub").forEach(element => element.textContent = data[productParam].usecase_2_sub);
+           document.querySelectorAll(".usecase_3_main").forEach(element => element.textContent = data[productParam].usecase_3_main);
+           document.querySelectorAll(".usecase_3_sub").forEach(element => element.textContent = data[productParam].usecase_3_main);
+
+           document.querySelectorAll(".usecase_4_sub").forEach(element => element.textContent = data[productParam].usecase_3_sub);
+           document.querySelectorAll(".usecase_4_main").forEach(element => element.textContent = data[productParam].usecase_4_main);
+           document.querySelectorAll(".usecase_4_sub").forEach(element => element.textContent = data[productParam].usecase_4_sub);
+
+           //features
+           document.querySelectorAll(".feature_1_main").forEach(element => element.textContent = data[productParam].feature_1_main);
+           document.querySelectorAll(".feature_1_sub").forEach(element => element.textContent = data[productParam].feature_1_sub);
+           document.querySelectorAll(".feature_2_main").forEach(element => element.textContent = data[productParam].feature_2_main);
+           document.querySelectorAll(".feature_2_sub").forEach(element => element.textContent = data[productParam].feature_2_sub);
+           document.querySelectorAll(".feature_3_main").forEach(element => element.textContent = data[productParam].feature_3_main);
+           document.querySelectorAll(".feature_3_sub").forEach(element => element.textContent = data[productParam].feature_3_sub);
+           document.querySelectorAll(".feature_4_main").forEach(element => element.textContent = data[productParam].feature_4_main);
+           document.querySelectorAll(".feature_4_sub").forEach(element => element.textContent = data[productParam].feature_4_sub);
+           document.querySelectorAll(".feature_5_main").forEach(element => element.textContent = data[productParam].feature_5_main);
+           document.querySelectorAll(".feature_5_sub").forEach(element => element.textContent = data[productParam].feature_5_sub);
+           document.querySelectorAll(".feature_6_main").forEach(element => element.textContent = data[productParam].feature_6_main);
+           document.querySelectorAll(".feature_6_sub").forEach(element => element.textContent = data[productParam].feature_6_sub);
+           
+
+           //accordian images
+           document.getElementById('img_0').src="../public/accordian/"+productParam+"/1.svg"
+           document.getElementById('img_1').src="../public/accordian/"+productParam+"/2.svg"
+           document.getElementById('img_2').src="../public/accordian/"+productParam+"/3.svg"
+           document.getElementById('img_3').src="../public/accordian/"+productParam+"/4.svg"
+           document.getElementById('img_4').src="../public/accordian/"+productParam+"/5.svg"
+           document.getElementById('img_5').src="../public/accordian/"+productParam+"/6.svg"
+           
+          } else {
+            alert('Product not found');
+          }
+        })
+        .catch(error => console.error('Error fetching products:', error));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    setActiveClass();
+    fetchProduct(); // Call the new function on page load
+  });
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 <body class="lazy-load-animations">
@@ -74,11 +158,10 @@
 
   <div class="hero-container">
     <h1 class="main-text">
-      <span class="inner-text">Attack Surface Management</span> Platform
+      <span class="inner-text productName"></span> Platform
     </h1>
-    <p class="small-text">
-      Gain a complete and dynamic view of your organization's attack surface with real-time monitoring and continuous
-      discovery
+    <p class="small-text tagLine">
+       
     </p>
 
     <div class="mid-Btn">
@@ -93,7 +176,7 @@
         </button></a>
     </div>
 
-    <img height="800px" class="dashboard-img" src="../public/images/csm-dash.jpg">
+    <img height="800px" class="dashboard-img" src="">
     <div class="wave-svg">
       <img src="../public/images/wave.png">
     </div>
@@ -187,15 +270,20 @@
 
   <div class="heading">
     <div>
-      <p class="big-text">Stay ahead of the threat landscape <br> with <span class="inner-text">PingSafe CNAPP.</span> </p>
-      <p class="small-text">Enable complete protection for your entire cloud infrastructure, from development to deployment.</p>
+      <p class="big-text tagLine_1_main"> </span> </p>
+      <p class="small-text tagLine_1_sub"> </p>
     </div>
   </div>
 
 
   <div class="product-h">
     
-    <div class="product-inner">
+
+
+
+
+
+      <div class="product-inner">
       <div class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
           <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_2438_1268)"/>
@@ -207,31 +295,14 @@
           </defs>
         </svg>
       </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
+        <h3 class="name usecase_1_main"></h3>
+        <p class="text usecase_1_sub">
+          {{ f.desc }}
         </p>
-        <a href="#" class="learn-more">Learn More</a>
+        <a href="https://blog.snapsec.co" class="learn-more">Learn More</a>
     </div>
 
-    <div class="product-inner">
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_2438_1268)"/>
-          <defs>
-            <linearGradient id="paint0_linear_2438_1268" x1="2.21138" y1="32" x2="32" y2="2.21138" gradientUnits="userSpaceOnUse">
-              <stop offset="0.00214992" stop-color="#0E41ED"/>
-              <stop offset="1" stop-color="#0FD3FE"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
-        </p>
-        <a href="#" class="learn-more">Learn More</a>
-    </div>
+
 
 
     <div class="product-inner">
@@ -246,12 +317,13 @@
           </defs>
         </svg>
       </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
-        </p>
-        <a href="#" class="learn-more">Learn More</a>
+      <h3 class="name usecase_2_main"></h3>
+      <p class="text usecase_2_sub"></p>
+        <a href="https://blog.snapsec.co" class="learn-more">Learn More</a>
     </div>
+
+
+
 
     <div class="product-inner">
       <div class="icon">
@@ -265,12 +337,13 @@
           </defs>
         </svg>
       </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
-        </p>
-        <a href="#" class="learn-more">Learn More</a>
+      <h3 class="name usecase_3_main"></h3>
+      <p class="text usecase_3_sub"></p>
+        <a href="https://blog.snapsec.co" class="learn-more">Learn More</a>
     </div>
+
+
+
 
     <div class="product-inner">
       <div class="icon">
@@ -284,32 +357,15 @@
           </defs>
         </svg>
       </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
-        </p>
-        <a href="#" class="learn-more">Learn More</a>
+      <h3 class="name usecase_4_main"></h3>
+      <p class="text usecase_4_sub"></p>
+        <a href="https://blog.snapsec.co" class="learn-more">Learn More</a>
     </div>
 
-    <div class="product-inner">
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_2438_1268)"/>
-          <defs>
-            <linearGradient id="paint0_linear_2438_1268" x1="2.21138" y1="32" x2="32" y2="2.21138" gradientUnits="userSpaceOnUse">
-              <stop offset="0.00214992" stop-color="#0E41ED"/>
-              <stop offset="1" stop-color="#0FD3FE"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-        <h3 class="name">CSPM</h3>
-        <p class="text">
-          Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..
-        </p>
-        <a href="#" class="learn-more">Learn More</a>
-    </div>
-    
+
+
+
+
     
   </div>
 
@@ -318,8 +374,8 @@
 
   <div class="heading">
     <div>
-      <p class="big-text">Stay ahead of the threat landscape <br> with <span class="inner-text">PingSafe CNAPP.</span> </p>
-      <p class="small-text">Enable complete protection for your entire cloud infrastructure, from development to deployment.</p>
+      <p class="big-text tagLine_2_main"> </span> </p>
+      <p class="small-text tagLine_2_sub"> </p>
     </div>
   </div>
 
@@ -328,57 +384,101 @@
 
     <div class="row_flex">
       <div class="row_inner">
-        <div class="accordion">
+
+
+
+
+    
+
+
+
+
+
+
+          <div class="accordion">
           <div class="accordion_intro">
-            <h4>Accordion title</h4>
+            <h4 class="feature_1_main"> </h4>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="accordion_content">
-            <p>  Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..</p>
+            <p class="feature_1_sub">   </p>
           </div>
         </div>
+
+
+
         <div class="accordion">
           <div class="accordion_intro">
-            <h4>Accordion title</h4>
-             <div>
-              <i class="fa-solid fa-chevron-down"></i>
-             </div>
+            <h4 class="feature_2_main"> </h4>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="accordion_content">
-            <p>  Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..</p>
+            <p class="feature_2_sub">   </p>
+          </div>
+        </div>
+
+
+
+        <div class="accordion">
+          <div class="accordion_intro">
+            <h4 class="feature_3_main"> </h4>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion_content">
+            <p class="feature_3_sub">   </p>
           </div>
         </div>
 
         <div class="accordion">
           <div class="accordion_intro">
-            <h4>Accordion title</h4>
-             <div>
-              <i class="fa-solid fa-chevron-down"></i>
-             </div>
+            <h4 class="feature_4_main"> </h4>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="accordion_content">
-            <p>  Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..</p>
+            <p class="feature_4_sub">   </p>
           </div>
         </div>
 
+
+
         <div class="accordion">
           <div class="accordion_intro">
-            <h4>Accordion title</h4>
-             <div>
-              <i class="fa-solid fa-chevron-down"></i>
-             </div>
+            <h4 class="feature_5_main"> </h4>
+            <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="accordion_content">
-            <p>  Detect & remediate cloud misconfigurations before deployment An enterprise SaaS built to deliver powerful and flexible vulnerability scanning..</p>
+            <p class="feature_5_sub">   </p>
           </div>
         </div>
+
+
+
+        <div class="accordion">
+          <div class="accordion_intro">
+            <h4 class="feature_6_main"> </h4>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion_content">
+            <p class="feature_6_sub">   </p>
+          </div>
+        </div>
+
+
+        
+
+
+
+
+
       </div>
     
       <div class="row_inner accordion_images">
-        <img src="../public/images/csm-dash.jpg" />
-        <img src="../public/images/csm-dash.jpg" />
-        <img src="../public/images/csm-dash.jpg" />
-        <img src="../public/images/csm-dash.jpg" />
+        <img src="" id="img_0" />
+        <img src="" id="img_1" />
+        <img src="" id="img_2" />
+        <img src="" id="img_3" />
+        <img src="" id="img_4" />
+        <img src="" id="img_5" />
       </div>
     </div>
     
@@ -388,7 +488,7 @@
 
   <div class="heading">
     <div>
-      <p class="big-text">Integrate with your platforms      </p>
+      <p class="big-text"><span class="inner-text">Integrate</span> with your platforms      </p>
       <p class="small-text">Use our integrations to get alerts sent instantly for ticketing.</p>
     </div>
   </div>
@@ -398,348 +498,26 @@
 
 
 
+<!-- Products Intregation  -->
+
+  {% include product_integration.html %}
 
 
+<!-- More Related Products  -->
 
-  <div class="intregations">
-    
-    <div class="intregations-card">
-      <h3>Alerting</h3>
-      <p>Automatically create tickets when new vulnerabilities are found.</p>
-      <div class="intregations-item">
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_1807_20105)">
-            <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-            <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-            <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_1807_20105)">
-            <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-            <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-            <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <g clip-path="url(#clip0_1807_20105)">
-              <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-              <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-              <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <g clip-path="url(#clip0_1807_20105)">
-              <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-              <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-              <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-      </div>
-    </div>
-
-    <div class="intregations-card">
-      <h3>Ticketing</h3>
-      <p>Automatically create tickets when new vulnerabilities are found.</p>
-      <div class="intregations-item">
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_1807_20105)">
-            <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-            <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-            <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_1807_20105)">
-            <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-            <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-            <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <g clip-path="url(#clip0_1807_20105)">
-              <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-              <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-              <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-          <div class="middle-line"></div>
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <g clip-path="url(#clip0_1807_20105)">
-              <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-              <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-              <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-      </div>
-    </div>
-
-
-    <div class="intregations-card">
-      <h3>Api</h3>
-      <p>Automatically create tickets when new vulnerabilities are found.</p>
-      <div class="intregations-item">
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-transparent lg:h-5 lg:w-5 xl:h-6 xl:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <g clip-path="url(#clip0_1807_20105)">
-            <path d="M5.14016 15.1181C5.14016 16.4977 4.0252 17.6126 2.64567 17.6126C1.26614 17.6126 0.151184 16.4977 0.151184 15.1181C0.151184 13.7386 1.26614 12.6237 2.64567 12.6237H5.14016V15.1181ZM6.38741 15.1181C6.38741 13.7386 7.50237 12.6237 8.88189 12.6237C10.2614 12.6237 11.3764 13.7386 11.3764 15.1181V21.3544C11.3764 22.7339 10.2614 23.8489 8.88189 23.8489C7.50237 23.8489 6.38741 22.7339 6.38741 21.3544V15.1181Z" fill="#E01E5A"></path>
-            <path d="M8.8819 5.10238C7.50237 5.10238 6.38741 3.98742 6.38741 2.60789C6.38741 1.22836 7.50237 0.113403 8.8819 0.113403C10.2614 0.113403 11.3764 1.22836 11.3764 2.60789V5.10238H8.8819ZM8.8819 6.36852C10.2614 6.36852 11.3764 7.48348 11.3764 8.86301C11.3764 10.2425 10.2614 11.3575 8.8819 11.3575H2.62678C1.24725 11.3575 0.132294 10.2425 0.132294 8.86301C0.132294 7.48348 1.24725 6.36852 2.62678 6.36852H8.8819Z" fill="#36C5F0"></path>
-            <path d="M18.8787 8.86301C18.8787 7.48348 19.9937 6.36852 21.3732 6.36852C22.7528 6.36852 23.8677 7.48348 23.8677 8.86301C23.8677 10.2425 22.7528 11.3575 21.3732 11.3575H18.8787V8.86301ZM17.6315 8.86301C17.6315 10.2425 16.5165 11.3575 15.137 11.3575C13.7575 11.3575 12.6425 10.2425 12.6425 8.86301V2.60789C12.6425 1.22836 13.7575 0.113403 15.137 0.113403C16.5165 0.113403 17.6315 1.22836 17.6315 2.60789V8.86301V8.86301Z" fill="#2EB67D"></path><path d="M15.137 18.8599C16.5165 18.8599 17.6315 19.9748 17.6315 21.3544C17.6315 22.7339 16.5165 23.8489 15.137 23.8489C13.7575 23.8489 12.6425 22.7339 12.6425 21.3544V18.8599H15.137ZM15.137 17.6126C13.7575 17.6126 12.6425 16.4977 12.6425 15.1181C12.6425 13.7386 13.7575 12.6237 15.137 12.6237H21.3921C22.7716 12.6237 23.8866 13.7386 23.8866 15.1181C23.8866 16.4977 22.7716 17.6126 21.3921 17.6126H15.137Z" fill="#ECB22E"></path></g><defs><clipPath id="clip0_1807_20105"><rect width="24" height="24" fill="white"></rect></clipPath></defs>
-          </svg>
-
-        
-      </div>
-    </div>
-    
-    
-  </div>
-
-
-
-
-
-
-
-  
-  <!-- product highlights ends here -->
-
-<!-- 
-  <div class="testimonials">
-    <h1 class="testimonials-heading">
-      Easily <span class="inner-text">Monitor, Analyze, and Fortify <br></span> your attack surface.
-
-    </h1>
-    <p class="testimonials-text">
-      An enterprise SaaS built to deliver powerful and flexible vulnerability scanning.
-    </p>
-  </div>
-
-
-
-
-  <div class="product NotOnPhone">
-    <div class="side-cards">
-      <div class="product-card1">
-        <div>
-          <img src="../public/images/product/1.svg">
-        </div>
-        <div>
-          <h3>Shadow Asset Detection</h3>
-          <p> Uncover hidden or unauthorized assets within your network, ensuring comprehensive visibility and
-            mitigating potential security risks.</p>
-        </div>
-      </div>
-      <div class="product-card2">
-        <div>
-          <h3>Credential and Secret Leak Monitoring</h3>
-          <p>Proactively track and manage potential leaks of credentials and secrets, fortifying your security posture
-            and minimizing the risk of unauthorized access.</p>
-        </div>
-        <div>
-          <img src="../public/images/product/2.svg">
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card3">
-      <img src="../public/images/product/3.svg">
-      <h3>Vulnerability Scanning</h3>
-      <p>Conduct thorough scans of your assets, identifying and prioritizing over a thousand known vulnerabilities</p>
+  <div class="heading">
+    <div>
+      <p class="big-text">Related <span class="inner-text"> Products</span> </p>
+      <p class="small-text">More related products here</p>
     </div>
   </div>
 
 
 
-
-  <div class="Mob_product notFroWeb">
-      <div class="product-card1">
-        <div>
-          <img src="../public/images/product/1.svg">
-        </div>
-        <div>
-          <h3>Shadow Asset Detection</h3>
-          <p> Uncover hidden or unauthorized assets within your network, ensuring comprehensive visibility and
-            mitigating potential security risks.</p>
-        </div>
-      </div>
-      <div class="product-card1">
-        <div>
-          <img src="../public/images/product/2.svg">
-        </div>
-        <div>
-          <h3>Credential and Secret Leak Monitoring</h3>
-          <p>Proactively track and manage potential leaks of credentials and secrets, fortifying your security posture
-            and minimizing the risk of unauthorized access.</p>
-        </div>
-      </div>
-
-      <div class="product-card1">
-        <div>
-          <img src="../public/images/product/3.svg">
-        </div>
-        <div>
-          <h3>Vulnerability Scanning</h3>
-          <p>Conduct thorough scans of your assets, identifying and prioritizing over a thousand known vulnerabilities</p>
-        </div>
-      </div>
-  </div> -->
-
-  <!-- Testimonials  -->
+  {% include related_products.html %}
 
 
 
-
-
-  <div class="testimonials">
-  <h1 class="testimonials-heading">
-    What Our Customers Say <br>about our <span class="inner-text">Solutions</span>
-  </h1>
-  <p class="testimonials-text">
-    We offer a comprehensive suite of services to help you protect your digital assets and reduce your security risks.
-  </p>
-</div>
-
-<div class="upper-card">
-  <div class="testimonial-cards">
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/zaid.png">
-        <h3 class="name">Zaid Ashraf</h3>
-        <p class="role">Security Engineer <span class="company">@Accenture</span></p>
-        <p class="detail">
-          Snapsec delivers top-notch pentesting services with a streamlined and in-depth approach of finding
-          vulnerabilities. Their quality of work in uncovering all classes of vulnerabilities is exceptional. A true
-          cybersecurity partner!
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/nabil.png">
-        <h3 class="name">Nabil Khan</h3>
-        <p class="role">Product Security Engineer <span class="company">@ Pixelbin</span></p>
-        <p class="detail">
-          I found the service to be professional and efficient.The testing was conducted in a thorough manner and
-          provided useful insights into our security vulnerabilities.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/elad.png">
-        <h3 class="name">Elad Shlomo</h3>
-        <p class="role">Security Engineer <span class="company">@Hibob</span></p>
-        <p class="detail">
-          Snapsec's security research goes beyond the OWASP top 10. They conduct in-depth examinations and identify
-          and report issues that extend beyond the surface level, delving into the core of the application.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/ali.png">
-        <h3 class="name">Ali Al Washali</h3>
-        <p class="role">Cyber Security Consultant <span class="company">@ Accenture</span></p>
-        <p class="detail">
-          Snapsec delivered outstanding services. Their professional support throughout the assessment was exemplary,
-          and their communication during the test was flawless. Highly recommended for top-notch cybersecurity
-          services.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/farzona.png">
-        <h3 class="name">Farzona Murodova</h3>
-        <p class="role">Project Manager <span class="company">@ Alif</span></p>
-        <p class="detail">
-          Snapsec's process is swift and transparent. The team's constant online support clarifies issues seamlessly.
-          Exceptional service—highly recommended for a stress-free experience.
-        </p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="testimonial-cards NotForPhone">
-    <div class="card-upper">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/zaid.png">
-        <h3 class="name">Zaid Ashraf</h3>
-        <p class="role">Security Engineer <span class="company">@Accenture</span></p>
-        <p class="detail">
-          Snapsec delivers top-notch pentesting services with a streamlined and in-depth approach of finding
-          vulnerabilities. Their quality of work in uncovering all classes of vulnerabilities is exceptional. A true
-          cybersecurity partner!
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper NotOnPhone">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/nabil.png">
-        <h3 class="name">Nabil Khan</h3>
-        <p class="role">Product Security Engineer <span class="company">@ Pixelbin</span></p>
-        <p class="detail">
-          I found the service to be professional and efficient.The testing was conducted in a thorough manner and
-          provided useful insights into our security vulnerabilities.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper NotOnPhone">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/elad.png">
-        <h3 class="name">Elad Shlomo</h3>
-        <p class="role">Security Engineer <span class="company">@Hibob</span></p>
-        <p class="detail">
-          Snapsec's security research goes beyond the OWASP top 10. They conduct in-depth examinations and identify
-          and report issues that extend beyond the surface level, delving into the core of the application.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper NotOnPhone">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/ali.png">
-        <h3 class="name">Ali Al Washali</h3>
-        <p class="role">Cyber Security Consultant <span class="company">@ Accenture</span></p>
-        <p class="detail">
-          Snapsec delivered outstanding services. Their professional support throughout the assessment was exemplary,
-          and their communication during the test was flawless. Highly recommended for top-notch cybersecurity
-          services.
-        </p>
-      </div>
-    </div>
-
-    <div class="card-upper NotOnPhone">
-      <div class="testimonial-card">
-        <img class="image" src="../public/images/testimonials/farzona.png">
-        <h3 class="name">Farzona Murodova</h3>
-        <p class="role">Project Manager <span class="company">@ Alif</span></p>
-        <p class="detail">
-          Snapsec's process is swift and transparent. The team's constant online support clarifies issues seamlessly.
-          Exceptional service—highly recommended for a stress-free experience.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -749,22 +527,22 @@
 
     <!-- Youtube video here -->
 
-    <div class="testimonials">
+    <!-- <div class="testimonials">
       <h1 class="testimonials-heading">
         A quick guide to <span class="inner-text">Disruptive Features</span><br> ASM has to offer
       </h1>
       <p class="testimonials-text">
         An enterprise SaaS built to deliver powerful and flexible vulnerability Management.
       </p>
-    </div>
+    </div> -->
 
 
-    <div id="ytube" class="youtube-video">
+    <!-- <div id="ytube" class="youtube-video">
       <iframe width="940" height="506" src="https://www.youtube.com/embed/cPqQbIprns0?modestbranding=1&controls=0"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 
-    </div>
+    </div> -->
 
     <!-- Schudule Card -->
 
@@ -810,7 +588,7 @@
           <a href="#">Case Studies</a>
         </li> -->
         <!-- <li>
-          <a href="https://snapsec.co/blog/">Our Blog</a>
+          <a href="https://blog.snapsec.co/">Our Blog</a>
         </li> -->
         <li>
           <a href="#">Terms & Conditions</a>
@@ -841,13 +619,13 @@
       </h3>
       <ul class="properties">
         <li>
-          <a href="/products/csm.html">Vulnerability Management</a>
+          <a href="/products/?product=csm">Vulnerability Management</a>
         </li>
         <li>
-          <a href="/products/asm.html">Attack Surface Management </a>
+          <a href="/products/?product=asm">Attack Surface Management </a>
         </li>
         <li>
-          <a href="/products/comming.html?p=ps">Phishing Simulator</a>
+          <a href="/products/?product=etp">Phishing Simulator</a>
         </li>
 
       </ul>
@@ -899,7 +677,7 @@
           <a href="#">Case Studies</a>
         </li> -->
         <!-- <li>
-          <a href="https://snapsec.co/blog/">Our Blog</a>
+          <a href="https://blog.snapsec.co/">Our Blog</a>
         </li> -->
         <li>
           <a href="#">Terms & Conditions</a>
@@ -1156,35 +934,4 @@ firstAccordion.click();
 </script>
 
 </html>
-      <!-- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var animatedElements = document.querySelectorAll('.animatedElement');
-
-    var observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          console.log("observed")
-
-          
-          // entry.target.classList.add('active');
-          // observer.unobserve(entry.target);
-          
-          entry.target.classList.forEach(c=>{
-            if(c.includes('_')){
-              newClass=c.split('_')[0]
-              entry.target.classList.remove(c)
-              entry.target.classList.add(newClass)
-            }
-          })
-        
-        
-        
-        }
-      });
-    }, { threshold: 0.2 });
-
-    animatedElements.forEach(function(element) {
-      observer.observe(element);
-    });
-  });
-</script> -->
+    

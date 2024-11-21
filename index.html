@@ -26,7 +26,145 @@ title: Home
     </div>
    </div>
 
-    <img class="dashboard-img" height="600px" src="public/images/dashboard.svg">
+
+
+
+   <div class="animation">
+    <div>
+
+        
+        <img src="public/images/animation/BGCircle.svg">
+
+
+
+        <!-- middle images -->
+        <div class="imageEle1">
+          <div>
+            <div id="istIMG" style="display: none;">
+              <div class="capsule">
+                <p>Vulnerability Management</p>
+              </div>
+              <div class="capsule" style="margin-left: 225px;margin-top:10px;">
+                <p>Vulnerability Collaboration</p>
+              </div>
+            </div>
+          </div>
+        
+          <div id="2ndIMG" style="display: none;">
+            <div class="capsule">
+              <p style="font-size: 16px;">Reporting</p>
+            </div>
+        
+            <div class="capsule" style="margin-left: -225px;margin-top:10px;">
+              <p>Detect Shadow Assets</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ist line iMgaes -->
+        <div class="imageEle2">
+          <div>
+            <div id="3rdIMG" style="display: none;">
+              <div class="capsule" style="margin-left: 225px;margin-top:10px;">
+                <p>Continuous Vulnerability Scanning</p>
+              </div>
+          
+              <div class="capsule">
+                <p>AI Vulnerability Reports</p>
+              </div>
+            </div>
+          </div>
+        
+          <div id="4thIMG" style="display: none;">
+            <div class="capsule">
+              <p>DNS and SSL Security</p>
+            </div>
+        
+            <div class="capsule" style="margin-left: -225px;margin-top:10px;">
+              <p>Detect Leaked Credentials</p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 3rd line images -->
+        <div class="imageEle3">
+          <div>
+            <div id="5thIMG" style="display: none;">
+              <div class="capsule" style="margin-left: 225px;margin-top:10px;">
+                <p>Secret Scanning</p>
+              </div>
+          
+              <div class="capsule">
+                <p>Training Employees</p>
+              </div>
+            </div>
+          </div>
+        
+          <div id="6thIMG" style="display: none;">
+            <div class="capsule">
+              <p>something11 here</p>
+            </div>
+        
+            <div class="capsule" style="margin-left: -225px;margin-top:10px;">
+              <p>something12 here</p>
+            </div>
+          </div>
+        </div>
+
+        <img class="overlay-image" id="DefaultDashboardimg1" src="public/images/animation/Dashboard.svg">
+        <img class="overlay-image" id="DefaultDashboardimg" src="public/images/animation/Dashboard.svg">
+        <img class="overlay-image VDP" id="dashboardIMG2" style="display: none;" src="public/Products/VDP.png">
+        <img class="overlay-image PS" id="dashboardIMG3" style="display: none;" src="public/Products/PS.png">
+        <img class="overlay-image VM" id="dashboardIMG4" style="display: none;" src="public/Products/VM.png">
+        <img class="overlay-image ASM" id="dashboardIMG5" style="display: none;" src="public/Products/ASM.png">
+        <img class="overlay-image SM" id="dashboardIMG6" style="display: none;" src="public/Products/SM.png">
+        <img class="overlay-image ETP" id="dashboardIMG7" style="display: none;" src="public/Products/ETP.png">
+    </div> 
+
+    <div class="upperEle">
+
+      <div id="image1">
+        <a href="products/?product=vdp"><img  class="backgroundBlur" src="public/images/animation/firstElement.svg">
+        <p>Vulnerability Disclosure Programme</p>
+      </a></div>
+
+      <div id="image2">
+        <a href="products/?product=ps"></a><img class="backgroundBlur" src="public/images/animation/secondEle.svg">
+        <p>Phishing Simulator</p></a>
+      </div>
+    </div>
+
+
+    <div class="upper2Ele">
+
+      <div id="image3">
+        <a href="products/?product=vm"><img  class="backgroundBlur" src="public/images/animation/thirdEle.svg">
+        <p>Vulnerability Management</p></a>
+      </div>
+
+      <div id="image4">
+        <a href="products/?product=asm"><img  class="backgroundBlur" src="public/images/animation/secondEle.svg">
+        <p>Attack Surface Management</p></a>
+      </div>
+    </div>
+
+    <div class="upper3Ele">
+      <div id="image5">
+        <a href="products/?product=ss"><img class="backgroundBlur" src="public/images/animation/secondEle.svg">
+        <p>Secret Scanner</p></a>
+      </div>
+
+      <div id="image6">
+        <a href="products/?product=etp"><img class="backgroundBlur" src="public/images/animation/firstElement.svg">
+        <p>Employee Training Management</p></a>
+      </div>
+    </div>
+
+</div>
+
+
     <div class="wave-svg">
       <img src="public/images/wave.png">
     </div>
@@ -953,7 +1091,7 @@ title: Home
     </p>
   </div>
 
-  <a href="https://snapsec.co/blog/hacking-larksuite/"><div class="blog">
+  <a href="https://blog.snapsec.co/hacking-larksuite/"><div class="blog">
     <div class="blog-cards">
       <div class="background-img">
         <img width="450" src="public/images/blogs/1.svg" width="400">
@@ -1047,4 +1185,238 @@ title: Home
 
   </div> -->
   <!-- Footer -->
+  
+<script>
+
+ 
+// for the background blur
+
+const elements = document.querySelectorAll('.backgroundBlur');
+const backgroundBlur = document.getElementById("backgroundBlurANimation");
+
+middleIMG1 = document.getElementById('image1')
+DefaultDashboardimg = document.getElementById('DefaultDashboardimg')
+
+
+
+
+middleIMG1.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  document.getElementById('dashboardIMG2').style.display = 'block';
+  document.getElementById('dashboardIMG3').style.display = 'none';
+  document.getElementById('dashboardIMG4').style.display = 'none';
+  document.getElementById('dashboardIMG5').style.display = 'none';
+  document.getElementById('dashboardIMG6').style.display = 'none';
+  document.getElementById('dashboardIMG7').style.display = 'none';
+
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG2').classList.add('active'); 
+  }, 10);
+});
+
+
+middleIMG1.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.classList.add('active'); 
+    document.getElementById('dashboardIMG2').style.display = 'none';
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG2').classList.remove('active'); 
+  }, 15000);
+});
+
+
+// 2nd hover image js
+
+
+middleIMG2 = document.getElementById('image2');
+
+
+middleIMG2.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  document.getElementById('dashboardIMG2').style.display = 'none';
+  document.getElementById('dashboardIMG3').style.display = 'block';
+  document.getElementById('dashboardIMG4').style.display = 'none';
+  document.getElementById('dashboardIMG5').style.display = 'none';
+  document.getElementById('dashboardIMG6').style.display = 'none';
+  document.getElementById('dashboardIMG7').style.display = 'none';
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG3').classList.add('active'); 
+  }, 10);
+});
+
+
+middleIMG2.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.classList.add('active'); 
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG3').classList.remove('active'); 
+    document.getElementById('dashboardIMG3').style.display = 'none';
+  }, 15000);
+});
+
+
+
+// 3rd hover image js
+
+
+middleIMG3 = document.getElementById('image3')
+
+middleIMG3.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  document.getElementById('dashboardIMG2').style.display = 'none';
+  document.getElementById('dashboardIMG3').style.display = 'none';
+  document.getElementById('dashboardIMG4').style.display = 'block';
+  document.getElementById('dashboardIMG5').style.display = 'none';
+  document.getElementById('dashboardIMG6').style.display = 'none';
+  document.getElementById('dashboardIMG7').style.display = 'none';
+
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG4').classList.add('active'); 
+  }, 10);
+});
+
+
+
+middleIMG3.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG4').classList.remove('active'); 
+    DefaultDashboardimg.classList.add('active'); 
+    document.getElementById('dashboardIMG4').style.display = 'none';
+  }, 15000);
+});
+
+
+
+// 4th hover image js
+
+
+middleIMG4 = document.getElementById('image4');
+
+
+middleIMG4.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  
+  document.getElementById('dashboardIMG2').style.display = 'none';
+  document.getElementById('dashboardIMG3').style.display = 'none';
+  document.getElementById('dashboardIMG4').style.display = 'none';
+  document.getElementById('dashboardIMG5').style.display = 'block';
+  document.getElementById('dashboardIMG6').style.display = 'none';
+  document.getElementById('dashboardIMG7').style.display = 'none';
+
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG5').classList.add('active'); 
+  }, 10);
+});
+
+middleIMG4.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG5').classList.remove('active'); 
+    DefaultDashboardimg.classList.add('active'); 
+    document.getElementById('dashboardIMG5').style.display = 'none';
+  }, 15000);
+});
+
+
+
+// 5th hover image js
+
+
+middleIMG5 = document.getElementById('image5');
+
+
+middleIMG5.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  document.getElementById('dashboardIMG2').style.display = 'none';
+  document.getElementById('dashboardIMG3').style.display = 'none';
+  document.getElementById('dashboardIMG4').style.display = 'none';
+  document.getElementById('dashboardIMG5').style.display = 'none';
+  document.getElementById('dashboardIMG6').style.display = 'block';
+  document.getElementById('dashboardIMG7').style.display = 'none';
+
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG6').classList.add('active'); 
+  }, 10);
+});
+
+middleIMG5.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.classList.add('active'); 
+    document.getElementById('dashboardIMG6').style.display = 'none';
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG6').classList.remove('active'); 
+  }, 15000);
+});
+
+
+
+// 6th hover image js
+
+
+middleIMG6 = document.getElementById('image6')
+
+middleIMG6.addEventListener("mouseover", function() {
+  document.getElementById('DefaultDashboardimg1').style.display="none"
+  DefaultDashboardimg.style.display = 'none';
+  DefaultDashboardimg.classList.remove('active')
+
+
+  
+  document.getElementById('dashboardIMG2').style.display = 'none';
+  document.getElementById('dashboardIMG3').style.display = 'none';
+  document.getElementById('dashboardIMG4').style.display = 'none';
+  document.getElementById('dashboardIMG5').style.display = 'none';
+  document.getElementById('dashboardIMG6').style.display = 'none';
+  document.getElementById('dashboardIMG7').style.display = 'block';
+
+
+  setTimeout(() => {
+    document.getElementById('dashboardIMG7').classList.add('active'); 
+  }, 10);
+});
+
+
+middleIMG6.addEventListener("mouseout", function() {
+
+  setTimeout(() => {
+    DefaultDashboardimg.classList.add('active'); 
+    document.getElementById('dashboardIMG7').style.display = 'none';
+    DefaultDashboardimg.style.display = 'block';
+    document.getElementById('dashboardIMG7').classList.remove('active'); 
+  }, 15000);
+});
+
+
+  </script>
   

@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
+<script src="https://tag.clearbitscripts.com/v1/pk_dc4c49a332089987a7e5eea8a2cf6231/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 
+    
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="2c4855e0-2333-4eb1-a38f-fd989b9f7755"></script>
 <head>
+
+<!-- Brevo Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.BrevoConversationsID = '65d1eacc8a56e13e8116b71e';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+    
+    
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -16,6 +36,9 @@
   <title>Contact Us - Snapsec</title>
   <link rel="stylesheet" type="text/css" href="public/style.css">
   <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+
 </head>
 
 <script>
@@ -227,7 +250,10 @@
       <a href="/#" class="serviceLink" id="service-hover">Service</a>
     </li>
     <li>
-      <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+      <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+    </li>
+    <li>
+      <a href="/pricing.html" target="">Pricing</a>
     </li>
     <li>
       <a href="/contact-us.html">Contact Us</a>
@@ -258,7 +284,10 @@
         <a href="/services.html" class="serviceLink">Service</a>
       </li>
       <li>
-        <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+        <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="/pricing.html" target="">Pricing</a>
       </li>
       <li>
         <a href="/contact-us.html">Contact Us</a>
@@ -352,7 +381,10 @@
         <a href="/#" class="serviceLink" id="serviceInnerHover">Service</a>
       </li>
       <li>
-        <a href="/https://snapsec.co/blog" target="_blank">Blog</a>
+        <a href="https://snapsec.co/blog" target="_blank">Blog</a>
+      </li>
+      <li>
+        <a href="/pricing.html" target="">Pricing</a>
       </li>
       <li>
         <a href="/contact-us.html">Contact Us</a>
@@ -366,31 +398,51 @@
   <div class="hover-links">
     
 
-
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/5.svg">
+      </div>
+      <a href="/products/?product=tmp">Asset Inventory Management</a>
+    </div>
     <div class="link">
       <div>
         <img src="/public/images/product/icons/1.svg">
       </div>
-      <a href="/products/asm.html">Attack Surface Management</a>
+      <a href="/products/?product=asm">Attack Surface Management</a>
     </div>
     <div class="link">
       <div>
         <img src="/public/images/product/icons/2.svg">
       </div>
-      <a href="/products/csm.html">Vulnerability Management</a>
+      <a href="/products/?product=csm">Vulnerability Management</a>
     </div>
     <div class="link">
       <div>
         <img src="/public/images/product/icons/3.svg">
       </div>
-      <a href="/products/vdp.html">Vulnerability Disclosure Management</a>
+      <a href="/products/?product=vdp">Vulnerability Disclosure Management</a>
     </div>
 
     <div class="link">
       <div>
         <img src="/public/images/product/icons/5.svg">
       </div>
-      <a href="/products/tms.html">Employee Training Managament</a>
+      <a href="/products/?product=tmp">Phishing Simulator</a>
+    </div>
+
+
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/5.svg">
+      </div>
+      <a href="/products/?product=ss">Secret Scanner</a>
+    </div>
+
+    <div class="link">
+      <div>
+        <img src="/public/images/product/icons/5.svg">
+      </div>
+      <a href="/products/?product=etp">Employee Training Managament</a>
     </div>
 
 
@@ -408,6 +460,7 @@
   </div>
 </div>
 <!-- Desktop Navbar When you hover of Product Link -->
+
 
 
 
@@ -515,11 +568,11 @@
       <textarea rows="4" placeholder="" name="MEETING_DESCRIPTION" id="MEETING_DESCRIPTION"></textarea>
     </label>
 
-    <div class="contact-btns NotOnPhone">
-      <a href="https://meet.brevo.com/snapsecco"><button>
-        Schedule a meeting
-      </button></a>
-      <button onclick="sendForm()">
+    <div class="contact-btns NotOnPhone" style="margin-top: 50px; color: white; ">
+      <!-- <a href="https://meet.brevo.com/snapsecco" style="color: white; align: left;">
+        Schedule a meeting instead?
+      </a> -->
+      <button onclick="sendForm()" style="margin-left: 10px;">
         Submit
       </button>
     </div>
@@ -682,7 +735,13 @@
    </a>
   </div>
 
-
+<script>
+ const params = new URLSearchParams(window.location.search);
+const reason = params.get('reason');
+if (reason) {
+    document.getElementById('MEETING_DESCRIPTION').value = reason;
+}
+</script>
 
 
 
@@ -718,10 +777,10 @@
           <a href="#">Case Studies</a>
         </li> -->
         <!-- <li>
-          <a href="https://snapsec.co/blog/">Our Blog</a>
+          <a href="https://blog.snapsec.co/">Our Blog</a>
         </li> -->
         <li>
-          <a href="#">Terms & Conditions</a>
+          <a href="privacy-policy.html">Privacy policy</a>
         </li>
       </ul>
     </div>
@@ -808,10 +867,10 @@
           <a href="#">Case Studies</a>
         </li> -->
         <!-- <li>
-          <a href="https://snapsec.co/blog/">Our Blog</a>
+          <a href="https://blog.snapsec.co/">Our Blog</a>
         </li> -->
         <li>
-          <a href="#">Terms & Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
         </li>
       </ul>
     </div>
@@ -1192,8 +1251,7 @@ function sendForm() {
 
         var formData = "FIRSTNAME=" + encodeURIComponent(fname) + "&EMAIL=" + encodeURIComponent(email) + "&MEETING_DESCRIPTION=" + encodeURIComponent(meeting_desc);
 
-        var url = 'https://8422075a.sibforms.com/serve/MUIFAMbCkAAh-Z-G9en9C0c_iFGmchMFQ0iSox8kYapsv8zEavBs7ruR--fxBMsmVRat7pmGc9pTSNQYzCdE8iOjhfrHICH7pF8ST-yfDd-5BEy-2ciJJkekOhwojFGibGRxKTy6GyXIt-0xV4Fq0vpf6CoWQqFqC4cVBufltVY5KMVYPUbgr4M5m-gl7otkXMS4dlnNjhRw86FH';
-
+        var url = 'https://07d26f28.sibforms.com/serve/MUIFAKxXlUNkrb3Q1gGFRPh3StSwfSxZnBhLvBhsNv1keRxcZIwoPALYsLo7G0WajFaxevcxoUbnrkI17aMSsBzwnwgfU-ccWYYR9QBKCu_YZjm2QOr_FAoQHVJHZV1DrEjb90VIQqOS2eIy-O0jIpB8ERr6cFPyaN5h3kjhNCDkZ4hKTi2dZhFoNQxyWB8m-whEC-xIhwN4mVay';
         var xhr = new XMLHttpRequest();
 
         xhr.open("POST", url, true);
