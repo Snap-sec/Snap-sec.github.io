@@ -427,6 +427,7 @@
        productNav = document.getElementById('Product-Tab');
        hoverLinks=document.getElementsByClassName('hover-links')
        bodyTag=document.getElementsByClassName('hero-container')[0]
+       desktopNav=document.getElementsByClassName('desktop-nav')[0]
 
 
 
@@ -435,6 +436,8 @@
         console.log('on Service');
          serviceNav.style.display = "block";
         productNav.style.display="none"
+         desktopNav.style.background='#030421'
+        
 
 
          serviceNav.style.opacity = "1";
@@ -449,6 +452,7 @@
         console.log('on product');
          serviceNav.style.display = "none";
          productNav.style.display="block"
+         desktopNav.style.background='#030421'
 
          serviceNav.style.opacity = "0";
       productNav.style.opacity = "1";
@@ -463,6 +467,7 @@
          // serviceNav.style.display = "none";
         productNav.style.display="none"
         serviceNav.style.display="none"
+         desktopNav.style.background='transparent'
     });
 
 
