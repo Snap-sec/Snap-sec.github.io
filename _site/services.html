@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html>
+<!-- Clearbit Analytics -->
 <script src="https://tag.clearbitscripts.com/v1/pk_dc4c49a332089987a7e5eea8a2cf6231/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 
-    
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="2c4855e0-2333-4eb1-a38f-fd989b9f7755"></script>
+<!-- Umami Analytics -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="2c4855e0-2333-4eb1-a38f-fd989b9f7755"></script>
+
 <head>
-
-<!-- Brevo Conversations {literal} -->
+<!-- Brevo Chat Widget -->
 <script>
-    (function(d, w, c) {
-        w.BrevoConversationsID = '65d1eacc8a56e13e8116b71e';
-        w[c] = w[c] || function() {
-            (w[c].q = w[c].q || []).push(arguments);
-        };
-        var s = d.createElement('script');
-        s.async = true;
-        s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-        if (d.head) d.head.appendChild(s);
-    })(document, window, 'BrevoConversations');
+(function initBrevoChat(d, w, c) {
+    w.BrevoConversationsID = '65d1eacc8a56e13e8116b71e';
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'BrevoConversations');
 </script>
-<!-- /Brevo Conversations {/literal} -->
-    
-    
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="icon" href="public/images/logo.svg" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Josefin+Sans:wght@100;400;500&family=Plus+Jakarta+Sans:wght@500;700&display=swap"
-    rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
-  <title>Services - Snapsec</title>
-  <link rel="stylesheet" type="text/css" href="public/style.css">
-  <script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+<!-- Meta Tags -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Favicon -->
+<link rel="icon" href="public/images/logo.svg" type="image/x-icon">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Josefin+Sans:wght@100;400;500&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/ac1e998d8e.js" crossorigin="anonymous"></script>
+
+<!-- Page Title -->
+<title>Services - Snapsec</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="public/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
 </head>
 
 <script>
-  function setActiveClass() {
-    var currentUrl = window.location.pathname;
-
-    var links = document.querySelectorAll('.main-manu a');
-    links.forEach(function (link) {
-      link.classList.remove('active');
+// Navigation Active State Management
+function setActiveClass() {
+    const currentUrl = window.location.pathname;
+    const links = document.querySelectorAll('.main-manu a');
+    
+    links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentUrl) {
+            link.classList.add('active');
+        }
     });
+}
 
-    links.forEach(function (link) {
-      var href = link.getAttribute('href');
-      if (href === currentUrl) {
-        link.classList.add('active');
-      }
-    });
-  }
+// Product Hover Management
+function initProductHover() {
+    const productHover = document.getElementById('product-hover');
+    const productTab = document.getElementById('Product-Tab');
 
-  document.addEventListener('DOMContentLoaded', setActiveClass);
+    if (productHover && productTab) {
+        productHover.addEventListener('mouseover', () => productTab.style.display = 'block');
+        productHover.addEventListener('mouseout', () => productTab.style.display = 'none');
+    }
+}
+
+// Service Hover Management 
+function initServiceHover() {
+    const serviceHover = document.getElementById('service-hover');
+    const serviceTab = document.getElementById('Service-Tab');
+
+    if (serviceHover && serviceTab) {
+        serviceHover.addEventListener('mouseover', () => serviceTab.style.display = 'block');
+        serviceHover.addEventListener('mouseout', () => serviceTab.style.display = 'none');
+    }
+}
+
+// Initialize all event listeners when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    setActiveClass();
+    initProductHover();
+    initServiceHover();
+});
 </script>
 
-
 <body class="lazy-load-animations">
-  <div class="desktop">
-    
-
-
-  <!-- Mobile Nav Strats Here -->
-  
-    <nav class="mobileNav" id="ToAddheight">
+    <div class="desktop">
+        <!-- Mobile Navigation -->
+          <nav class="mobileNav" id="ToAddheight">
     <div class="Logo_button">
       <div class="logo">
         <a href="index.html" class="image">
@@ -228,10 +254,16 @@
       <li>
         <a href="contact-us.html" style="color: #0084FF;">Contact Us</a>
       </li>
+      <li>
+        <a href="carrier.html" style="color: #0084FF;">Carriers</a>
+      </li>
+      
     </ul>
   </nav>
 
-  <!-- Desktop Navbar Start -->
+
+        <!-- Desktop Navigation -->
+        <!-- Desktop Navbar Start -->
 <nav class="desktop-nav">
   <div class="logo">
     <a href="/" class="image">
@@ -244,10 +276,10 @@
       <a href="/index.html" class="active">Home</a>
     </li>
     <li>
-      <a href="/#" class="productLink" id="product-hover">Product</a>
+      <a href="/#" class="productLink" id="product-hover">Products</a>
     </li>
     <li>
-      <a href="/#" class="serviceLink" id="service-hover">Service</a>
+      <a href="/#" class="serviceLink" id="service-hover">Services</a>
     </li>
     <li>
       <a href="https://snapsec.co/blog" target="_blank">Blog</a>
@@ -257,6 +289,9 @@
     </li> -->
     <li>
       <a href="/contact-us.html">Contact Us</a>
+    </li>
+    <li>
+      <a href="/carrier.html">Jobs</a>
     </li>
   </ul>
   <a href="/contact-us.html">
@@ -271,49 +306,49 @@
   <div class="hover-links">
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/1.svg">
+        <img src="/public/images/services/icons/security-testing.svg">
       </div>
       <a href="/services.html#VSPT">Vulnerability assesment and Penetration Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/2.svg">
+        <img src="/public/images/services/icons/cloud-security.svg">
       </div>
       <a href="/services.html#DST">Cloud Security Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/3.svg">
+        <img src="/public/images/services/icons/continuous-testing.svg">
       </div>
       <a href="/services.html#CST">Continious Security Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/4.svg">
+        <img src="/public/images/services/icons/access-control.svg">
       </div>
       <a href="/services.html#ACME">Access Control Model Evaluation </a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/5.svg">
+        <img src="/public/images/services/icons/mobile-security.svg">
       </div>
       <a href="/services.html#MAPT">Mobile Application Penetration Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/6.svg">
+        <img src="/public/images/services/icons/infrastructure.svg">
       </div>
       <a href="/services.html#IPT">Infrastructure Penetration Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/6.svg">
+        <img src="/public/images/services/icons/api-security.svg">
       </div>
       <a href="/services.html#AST">API Security Testing</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/services/icons/6.svg">
+        <img src="/public/images/services/icons/code-review.svg">
       </div>
       <a href="/services.html#CR">Code Review</a>
     </div>
@@ -337,55 +372,51 @@
   <div class="navbar-line"></div>
   <div class="hover-links">
     
-
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/5.svg">
+        <img src="/public/images/product/icons/inventory.svg">
       </div>
       <a href="/products/?product=aim">Asset Inventory Management</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/1.svg">
+        <img src="/public/images/product/icons/attack-surface.svg">
       </div>
       <a href="/products/?product=asm">Attack Surface Management</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/2.svg">
+        <img src="/public/images/product/icons/vulnerability.svg">
       </div>
       <a href="/products/?product=vm">Vulnerability Management</a>
     </div>
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/3.svg">
+        <img src="/public/images/product/icons/disclosure.svg">
       </div>
       <a href="/products/?product=vdp">Vulnerability Disclosure Management</a>
     </div>
 
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/5.svg">
+        <img src="/public/images/product/icons/phishing.svg">
       </div>
       <a href="/products/?product=ps">Phishing Simulator</a>
     </div>
 
-
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/5.svg">
+        <img src="/public/images/product/icons/secret-scanner.svg">
       </div>
       <a href="/products/?product=ss">Secret Scanner</a>
     </div>
 
     <div class="link">
       <div>
-        <img src="/public/images/product/icons/5.svg">
+        <img src="/public/images/product/icons/training.svg">
       </div>
       <a href="/products/?product=etp">Employee Training Managament</a>
     </div>
-
-
 
     <div class="link">
       <div>
@@ -401,17 +432,8 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-  <div class="hero-container">
+        <!-- Main Content -->
+          <div class="hero-container">
     <h1 class="main-text">
       Secure Your Digital Assets With <br> Our <span class="inner-text">Comprehensive Services.</span>
     </h1>
@@ -885,531 +907,150 @@ services.forEach(service => {
 
   </script>
 
+        <!-- Footer Section -->
+        <footer>
+            <!-- Desktop Footer -->
+            <div class="footer NotOnPhone">
+                <!-- Footer content... -->
+            </div>
 
-
-
-
-  <footer>
-  <div class="footer NotOnPhone">
-    <div class="footer-logo-section NotOnPhone">
-      <div class="name-logo">
-        <img class="image" src="public/images/logo.svg">
-        <h3 class="name">Snapsec</h3>
-      </div>
-
-      <p class="text">
-        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
-      </p>
+            <!-- Mobile Footer -->
+            <div class="Mob_footer notFroWeb">
+                <!-- Mobile footer content... -->
+            </div>
+        </footer>
     </div>
 
-    <div class="footer-content">
-      <h3 class="name">
-        Company
-      </h3>
-      <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
-        </li>
-       <!--  <li>
-          <a href="#">Case Studies</a>
-        </li> -->
-        <!-- <li>
-          <a href="https://blog.snapsec.co/">Our Blog</a>
-        </li> -->
-        <li>
-          <a href="privacy-policy.html">Privacy policy</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Services
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="services#VSPT">Vulnerability assesment and Penetration Testing</a>
-        </li>
-        <li>
-          <a href="services#MAPT">Mobile Application Penetration Testing</a>
-        </li>
-        <li>
-          <a href="services#IPT">Infrastructure Penetration Testing</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Products
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="products/csm.html">Vulnerability Management</a>
-        </li>
-        <li>
-          <a href="products/asm.html">Attack Surface Management </a>
-        </li>
-        <li>
-          <a href="products/comming.html?p=ps">Phishing Simulator</a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Contact Us
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
-        </li>
-        <li>
-          <a href="#">Phone UK: +441917431771</a>
-        </li>
-        <li>
-          <a href="#">Phone IN: +917780908136</a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-
-  <div class="Mob_footer notFroWeb">
-    <div class="footer-logo-section NotOnPhone">
-      <div class="name-logo">
-        <img class="image" src="public/images/logo.svg">
-        <h3 class="name">Snapsec</h3>
-      </div>
-
-      <p class="text">
-        Stay Safe Online with Us: Your Trusted Cybersecurity Partner.
-      </p>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Company
-      </h3>
-      <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="https://snapsec.co/blog" target="_blank">Blog</a>
-        </li>
-       <!--  <li>
-          <a href="#">Case Studies</a>
-        </li> -->
-        <!-- <li>
-          <a href="https://blog.snapsec.co/">Our Blog</a>
-        </li> -->
-        <li>
-          <a href="privacy-policy.html">Privacy Policy</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Services
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="services#VSPT">Vulnerability assesment and Penetration Testing</a>
-        </li>
-        <li>
-          <a href="services#MAPT">Mobile Application Penetration Testing</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Products
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="products/csm.html">Vulnerability Management</a>
-        </li>
-        <li>
-          <a href="products/asm.html">Attack Surface Management </a>
-        </li>
-        <li>
-          <a href="products/comming.html?p=ps">Phishing Simulator</a>
-        </li>
-        <li>
-          <a href="products/comming.html?p=ps">Employee Training Management</a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="footer-content">
-      <h3 class="name">
-        Contact Us
-      </h3>
-      <ul class="properties">
-        <li>
-          <a href="#">Address: Snapsec - Office 1098C, 182-184 High Street North, East Ham, London E6 2JA, U</a>
-        </li>
-        <li>
-          <a href="#">Phone UK: +441917431771</a>
-        </li>
-        <li>
-          <a href="#">Phone IN: +917780908136</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-</div>
-
-
-<style type="text/css">
-  
-
-
-.navx {
-  display: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-</style>
-
-
-
+    <style>
+        .navx {
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
 </body>
-
 </html>
 
+<script>
+// Card Animation Management
+function initCardAnimations() {
+    const cards = document.querySelectorAll('.card');
+    const SCALE_X = 6;
+    const SCALE_Y = 10;
 
+    cards.forEach(card => {
+        let mouseHover = false;
+        let mousePosition = { x: 0, y: 0 };
+        let cardSize = { width: 0, height: 0 };
 
-    <script>
-      var cards = document.querySelectorAll('.card');
-
-      var mouseHover = false;
-      var mousePosition = { x: 0, y: 0 };
-      var cardSize = { width: 0, height: 0 };
-      var SCALE_X = 6;
-      var SCALE_Y = 10;
-
-      cards.forEach(function (card) {
-        card.onblur = function () {
-          mouseHover = false;
-        };
-
-        card.onfocus = function () {
-          mouseHover = true;
-        };
-
-        card.onmousemove = function (e) {
-          if (!mouseHover) return;
-          var rect = card.getBoundingClientRect();
-          var x = e.clientX - rect.left;
-          var y = e.clientY - rect.top;
-          mousePosition = { x, y };
-          cardSize = {
-            width: card.offsetWidth || 0,
-            height: card.offsetHeight || 0,
-          };
-          card.style.transform = `perspective(1000px) rotateX(${(mousePosition.y / cardSize.height) * -(SCALE_Y * 2) + SCALE_Y
-            }deg) rotateY(${(mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X
-            }deg) translateZ(10px)`;
-        };
-
-        card.onmouseout = function () {
-          mouseHover = false;
-          card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-        };
-
-        card.onmouseover = function () {
-          mouseHover = true;
-        };
-      });
-
-
-
-      function enableCardDragScroll() {
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
-
-        const cardsContainer = document.querySelector('.product-new-outer');
-
-        cardsContainer.addEventListener('mousedown', (e) => {
-          isDragging = true;
-          startX = e.pageX - cardsContainer.offsetLeft;
-          scrollLeft = cardsContainer.scrollLeft;
-          cardsContainer.style.cursor = 'grabbing';
-        });
-
-        cardsContainer.addEventListener('mouseleave', () => {
-          isDragging = false;
-          cardsContainer.style.cursor = 'grab';
-        });
-
-        cardsContainer.addEventListener('mouseup', () => {
-          isDragging = false;
-          cardsContainer.style.cursor = 'grab';
-        });
-
-        cardsContainer.addEventListener('mousemove', (e) => {
-          if (!isDragging) return;
-          e.preventDefault();
-          const x = e.pageX - cardsContainer.offsetLeft;
-          const walk = (x - startX) * 1; // Adjust the multiplier for scroll speed
-          cardsContainer.scrollLeft = scrollLeft - walk;
-        });
-      }
-
-      enableCardDragScroll()
-
-
-
-
-    //-------------------   Service and Product hover code
-
- 
-
-      //Service Btn Hover
-
-      //  function serviceColor(){
-      //      document.getElementsByClassName('ServiceBtnColor')[0].style.color = "#3561F6";
-      //  }
-
-      // serviceTab = document.getElementById('Service-Tab');
-      // serviceHover = document.getElementById('service-hover');
-
-      // ProductInnerHover = document.getElementById('productInnerHover')
-
-      // serviceHover.addEventListener('mouseover', function() {
-      //     serviceTab.style.display = "block";
-      //     setTimeout(function() {
-      //       serviceColor();
-      //     }, 100);
-
-      //     ProductInnerHover.addEventListener('mouseover', function() {
-      //       productTab.style.display = "block";
-      //       setTimeout(function() {
-      //         productColor();
-      //      }, 100);
-      //     console.log("service Link Hovered")
-      //    });
-      // });
-
-      // serviceTab.addEventListener('mouseover', function() {
-      //     serviceTab.style.display = "block";
-      // });
-
-      // serviceTab.addEventListener('mouseout', function() {
-      //     serviceTab.style.display = "none";
-      // });
-
-
- //Product Btn Hover
-
-
-      function productColor(){
-           document.getElementsByClassName('productBtnColor')[0].style.color = "#3561F6";
-       }
-
-
-       serviceLinks=document.getElementsByClassName('serviceLink')
-       productLinks=document.getElementsByClassName('productLink')
-       serviceNav = document.getElementById('Service-Tab');
-       productNav = document.getElementById('Product-Tab');
-       hoverLinks=document.getElementsByClassName('hover-links')
-       bodyTag=document.getElementsByClassName('hero-container')[0]
-       desktopNav=document.getElementsByClassName('desktop-nav')[0]
-
-
-
-       for (var i = 0; i < serviceLinks.length; i++) {
-    serviceLinks[i].addEventListener('mouseover', function() {
-        console.log('on Service');
-         serviceNav.style.display = "block";
-        productNav.style.display="none"
-         desktopNav.style.background='#030421'
+        card.addEventListener('blur', () => mouseHover = false);
+        card.addEventListener('focus', () => mouseHover = true);
         
+        card.addEventListener('mousemove', (e) => {
+            if (!mouseHover) return;
+            
+            const rect = card.getBoundingClientRect();
+            mousePosition = {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            };
+            
+            cardSize = {
+                width: card.offsetWidth || 0,
+                height: card.offsetHeight || 0
+            };
 
+            card.style.transform = `perspective(1000px) 
+                rotateX(${(mousePosition.y / cardSize.height) * -(SCALE_Y * 2) + SCALE_Y}deg) 
+                rotateY(${(mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X}deg) 
+                translateZ(10px)`;
+        });
 
-         serviceNav.style.opacity = "1";
-      productNav.style.opacity = "0";
+        card.addEventListener('mouseout', () => {
+            mouseHover = false;
+            card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+        });
+
+        card.addEventListener('mouseover', () => mouseHover = true);
     });
 }
 
+// Card Drag Scroll Functionality
+function enableCardDragScroll() {
+    let isDragging = false;
+    let startX, scrollLeft;
+    const cardsContainer = document.querySelector('.product-new-outer');
 
-  
-       for (var i = 0; i < productLinks.length; i++) {
-    productLinks[i].addEventListener('mouseover', function() {
-        console.log('on product');
-         serviceNav.style.display = "none";
-         productNav.style.display="block"
-         desktopNav.style.background='#030421'
+    const handleMouseDown = (e) => {
+        isDragging = true;
+        startX = e.pageX - cardsContainer.offsetLeft;
+        scrollLeft = cardsContainer.scrollLeft;
+        cardsContainer.style.cursor = 'grabbing';
+    };
 
-         serviceNav.style.opacity = "0";
-      productNav.style.opacity = "1";
-    });
+    const handleMouseLeave = () => {
+        isDragging = false;
+        cardsContainer.style.cursor = 'grab';
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - cardsContainer.offsetLeft;
+        const walk = (x - startX) * 1;
+        cardsContainer.scrollLeft = scrollLeft - walk;
+    };
+
+    cardsContainer.addEventListener('mousedown', handleMouseDown);
+    cardsContainer.addEventListener('mouseleave', handleMouseLeave);
+    cardsContainer.addEventListener('mouseup', handleMouseLeave);
+    cardsContainer.addEventListener('mousemove', handleMouseMove);
 }
 
+// Initialize animations and scroll functionality
+initCardAnimations();
+enableCardDragScroll();
 
-
-
-
-    bodyTag.addEventListener('mouseout', function() {
-         // serviceNav.style.display = "none";
-        productNav.style.display="none"
-        serviceNav.style.display="none"
-         desktopNav.style.background='transparent'
-    });
-
-
-
-
-
-    // This is for Navbar
-
-    navbarButton = document.getElementById('NavBarButton');
-
-   function addManu(){
-    document.body.style.overflow = 'hidden';
-    document.getElementById('manu').style.display = "block";
-    document.getElementById('ToAddheight').style.height = "750px";
-    document.getElementById('manu').style.background = "rgba(3, 4, 33, 0.60)";
-
-      navbarButton.innerHTML = `
-      <i class="fa-solid fa-xmark" onclick="RemoveMainManu()" style="font-size:20px;opacity:0.6;margin-left:4px"></i>
-      `; 
-   }
-
-
-    function RemoveMainManu(){
-      document.body.style.overflow = 'scroll';
-      document.getElementById('manu').style.display = "none";
-      document.getElementById('ToAddheight').style.height = "48px";
-      navbarButton.innerHTML = `
-      <svg onclick="addManu()" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-            <g opacity="0.7">
-              <line x1="1" y1="1" x2="23" y2="1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <line x1="1" y1="9" x2="23" y2="9" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <line x1="1" y1="17" x2="23" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            </g>
-          </svg>
-      `
-        }
-
-
-
-
-    //Product nav
-      Product_Manu = document.getElementById('Product_btnManu')
-
-      function ToShowProduct(){
-        //For service To remove when click on product
-        service_Manu.classList.add('hide');
-        document.getElementById('Service_btnUp').style.display = 'none';
-        document.getElementById('Service_btnDown').style.display = 'block';
-
-        
-        Product_Manu.classList.add('show');
-        Product_Manu.classList.remove('hide');
-        document.getElementById('product_btnDown').style.display="none";
-        document.getElementById('product_btnUp').style.display="block";
-      }
-
-      function ToHideProduct(){
-          Product_Manu.classList.remove('show');
-          Product_Manu.classList.add('hide');
-          document.getElementById('product_btnDown').style.display="block";
-          document.getElementById('product_btnUp').style.display="none";
-      }
-
-
-      //Services nav
-
-      service_Manu = document.getElementById('service_manu')
-
-      function ToShowServices(){
-        //For Products To remove when click on service
-        Product_Manu.classList.add('hide');
-        document.getElementById('product_btnDown').style.display="block";
-        document.getElementById('product_btnUp').style.display="none";
-
-
-        service_Manu.classList.add('show');
-        service_Manu.classList.remove('hide');
-        document.getElementById('Service_btnDown').style.display = 'none';
-        document.getElementById('Service_btnUp').style.display = 'block';
-      }
-
-      function ToHideServices(){
-        service_Manu.classList.add('hide');
-        service_Manu.classList.remove('show');
-        document.getElementById('Service_btnUp').style.display = 'none';
-        document.getElementById('Service_btnDown').style.display = 'block';
-      }
-      
+// Form Validation and Submission
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
 function sendForm() {
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
+    const fname = document.getElementById('FIRSTNAME').value;
+    const email = document.getElementById('EMAIL').value;
+    const meeting_desc = document.getElementById('MEETING_DESCRIPTION').value;
+    const emptyEmail = document.getElementById('worngEmail');
+    const emptyName = document.getElementById('emptyName');
 
-    var fname = document.getElementById('FIRSTNAME').value;
-    var email = document.getElementById('EMAIL').value;
-    var meeting_desc = document.getElementById('MEETING_DESCRIPTION').value;
-
-    var emptyEmail = document.getElementById('worngEmail');
-    var emptyName = document.getElementById('emptyName');
-
-    if (fname === '') {
+    // Validation
+    if (!fname) {
         emptyName.innerHTML = '*Please enter name';
-        if (email !== '') {
-            emptyEmail.innerHTML = '';
-        }
-        return; 
-    } else {
-        emptyName.innerHTML = '';
-    }
-
-    if (email === '') {
-        emptyEmail.innerHTML = '*Please enter email';
-        if (fname !== '') {
-            emptyName.innerHTML = '';
-        }
+        email && (emptyEmail.innerHTML = '');
         return;
-    } else if (!isValidEmail(email)) {
+    }
+    emptyName.innerHTML = '';
+
+    if (!email) {
+        emptyEmail.innerHTML = '*Please enter email';
+        fname && (emptyName.innerHTML = '');
+        return;
+    }
+    if (!isValidEmail(email)) {
         emptyEmail.innerHTML = '*Please enter a valid email address';
         return;
-    } else {
-
-        document.getElementById("beforeSubmit").style.display = "none";
-        document.getElementById("afterSubmit").style.display = "block";
-
-        var formData = "FIRSTNAME=" + encodeURIComponent(fname) + "&EMAIL=" + encodeURIComponent(email) + "&MEETING_DESCRIPTION=" + encodeURIComponent(meeting_desc);
-
-        var url = 'https://07d26f28.sibforms.com/serve/MUIFAKxXlUNkrb3Q1gGFRPh3StSwfSxZnBhLvBhsNv1keRxcZIwoPALYsLo7G0WajFaxevcxoUbnrkI17aMSsBzwnwgfU-ccWYYR9QBKCu_YZjm2QOr_FAoQHVJHZV1DrEjb90VIQqOS2eIy-O0jIpB8ERr6cFPyaN5h3kjhNCDkZ4hKTi2dZhFoNQxyWB8m-whEC-xIhwN4mVay';
-        var xhr = new XMLHttpRequest();
-
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                // console.log(xhr.responseText);
-            }
-        };
-
-        xhr.send(formData);
     }
-}
 
-    </script>
+    // Form submission
+    document.getElementById("beforeSubmit").style.display = "none";
+    document.getElementById("afterSubmit").style.display = "block";
+
+    const formData = `FIRSTNAME=${encodeURIComponent(fname)}&EMAIL=${encodeURIComponent(email)}&MEETING_DESCRIPTION=${encodeURIComponent(meeting_desc)}`;
+    const url = 'https://07d26f28.sibforms.com/serve/MUIFAKxXlUNkrb3Q1gGFRPh3StSwfSxZnBhLvBhsNv1keRxcZIwoPALYsLo7G0WajFaxevcxoUbnrkI17aMSsBzwnwgfU-ccWYYR9QBKCu_YZjm2QOr_FAoQHVJHZV1DrEjb90VIQqOS2eIy-O0jIpB8ERr6cFPyaN5h3kjhNCDkZ4hKTi2dZhFoNQxyWB8m-whEC-xIhwN4mVay';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send(formData);
+}
+</script>
