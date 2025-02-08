@@ -66,21 +66,41 @@ function setActiveClass() {
 function initProductHover() {
     const productHover = document.getElementById('product-hover');
     const productTab = document.getElementById('Product-Tab');
+    const heroContainer = document.querySelector('.hero-container');
+    const serviceTab = document.getElementById('Service-Tab');
 
     if (productHover && productTab) {
-        productHover.addEventListener('mouseover', () => productTab.style.display = 'block');
-        productHover.addEventListener('mouseout', () => productTab.style.display = 'none');
+        productHover.addEventListener('mouseover', () => {
+          productTab.style.display = 'block'
+          serviceTab.style.display = 'none'
+
+        });
+        // productHover.addEventListener('mouseout', () => productTab.style.display = 'none');
+        
+        if (heroContainer) {
+            heroContainer.addEventListener('mouseover', () => productTab.style.display = 'none');
+        }
     }
 }
 
 // Service Hover Management 
 function initServiceHover() {
+  const productTab = document.getElementById('Product-Tab');
     const serviceHover = document.getElementById('service-hover');
     const serviceTab = document.getElementById('Service-Tab');
+    const heroContainer = document.querySelector('.hero-container');
 
     if (serviceHover && serviceTab) {
-        serviceHover.addEventListener('mouseover', () => serviceTab.style.display = 'block');
-        serviceHover.addEventListener('mouseout', () => serviceTab.style.display = 'none');
+        serviceHover.addEventListener('mouseover', () => {
+          productTab.style.display = 'none'
+          serviceTab.style.display = 'block'
+
+        });
+        // serviceHover.addEventListener('mouseout', () => serviceTab.style.display = 'none');
+        
+        if (heroContainer) {
+            heroContainer.addEventListener('mouseover', () => serviceTab.style.display = 'none');
+        }
     }
 }
 
